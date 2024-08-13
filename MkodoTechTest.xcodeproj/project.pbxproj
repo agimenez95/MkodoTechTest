@@ -7,13 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B906A6882C6A9F94006ED5AB /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6872C6A9F94006ED5AB /* Draw.swift */; };
+		B906A68B2C6A9FF0006ED5AB /* ResultViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A68A2C6A9FF0006ED5AB /* ResultViewModelTests.swift */; };
+		B906A68E2C6AA020006ED5AB /* DateFormatterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A68D2C6AA020006ED5AB /* DateFormatterExtensionsTests.swift */; };
+		B906A6912C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6902C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift */; };
+		B906A6932C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6922C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift */; };
+		B906A6952C6AA66F006ED5AB /* FaultyJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = B906A6942C6AA66F006ED5AB /* FaultyJSON.json */; };
+		B906A6982C6B4ADC006ED5AB /* InvalidDates.json in Resources */ = {isa = PBXBuildFile; fileRef = B906A6972C6B4ADC006ED5AB /* InvalidDates.json */; };
+		B906A69A2C6B4FE3006ED5AB /* ResultDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6992C6B4FE3006ED5AB /* ResultDetailView.swift */; };
+		B906A69C2C6B4FF1006ED5AB /* ResultDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A69B2C6B4FF1006ED5AB /* ResultDetailViewModel.swift */; };
+		B906A69E2C6B513D006ED5AB /* OutcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A69D2C6B513D006ED5AB /* OutcomeView.swift */; };
+		B906A6A02C6B518C006ED5AB /* OutcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A69F2C6B518C006ED5AB /* OutcomeViewModel.swift */; };
+		B906A6A22C6B555B006ED5AB /* PrizeTitleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6A12C6B555B006ED5AB /* PrizeTitleViewModifier.swift */; };
+		B906A6A42C6B5D4B006ED5AB /* BallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6A32C6B5D4B006ED5AB /* BallView.swift */; };
+		B906A6A62C6B5E53006ED5AB /* BallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6A52C6B5E53006ED5AB /* BallViewModel.swift */; };
+		B906A6A82C6B69D8006ED5AB /* ResultDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6A72C6B69D8006ED5AB /* ResultDetailViewModelTests.swift */; };
+		B906A6AA2C6B6A08006ED5AB /* Draw+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6A92C6B6A08006ED5AB /* Draw+Extensions.swift */; };
+		B906A6AC2C6B6D71006ED5AB /* DrawExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6AB2C6B6D71006ED5AB /* DrawExtensionsTests.swift */; };
+		B906A6AE2C6B8687006ED5AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6AD2C6B8687006ED5AB /* MainView.swift */; };
+		B906A6B42C6B8718006ED5AB /* MyTicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6B32C6B8718006ED5AB /* MyTicketsView.swift */; };
+		B906A6B72C6B872A006ED5AB /* MyTicketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6B62C6B872A006ED5AB /* MyTicketsViewModel.swift */; };
+		B906A6B92C6B88A7006ED5AB /* StubMyTicketsData.json in Resources */ = {isa = PBXBuildFile; fileRef = B906A6B82C6B88A7006ED5AB /* StubMyTicketsData.json */; };
+		B906A6BC2C6B8A17006ED5AB /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6BB2C6B8A17006ED5AB /* Tickets.swift */; };
+		B906A6BE2C6B8A6A006ED5AB /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6BD2C6B8A6A006ED5AB /* Ticket.swift */; };
+		B906A6C02C6B8AAF006ED5AB /* MyTicketsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6BF2C6B8AAF006ED5AB /* MyTicketsApiService.swift */; };
+		B906A6C22C6B8B05006ED5AB /* StubDataMyTicketsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6C12C6B8B04006ED5AB /* StubDataMyTicketsApiService.swift */; };
+		B912B46A2C6B90E900823E6E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4692C6B90E900823E6E /* MainViewModel.swift */; };
+		B912B46C2C6BA31800823E6E /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B46B2C6BA31800823E6E /* MainViewModelTests.swift */; };
+		B912B46E2C6BA33900823E6E /* BallViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B46D2C6BA33900823E6E /* BallViewModelTests.swift */; };
+		B912B4702C6BA35800823E6E /* MyTicketsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B46F2C6BA35800823E6E /* MyTicketsViewModelTests.swift */; };
+		B912B4722C6BA37800823E6E /* StubDataMyTicketsApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4712C6BA37800823E6E /* StubDataMyTicketsApiServiceTests.swift */; };
+		B912B4742C6BAC7600823E6E /* MyTicketsApiServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4732C6BAC7600823E6E /* MyTicketsApiServiceSpy.swift */; };
+		B912B4762C6BB11200823E6E /* Ticket+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4752C6BB11200823E6E /* Ticket+Extensions.swift */; };
+		B912B4782C6BB48300823E6E /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4772C6BB48300823E6E /* Matches.swift */; };
+		B912B47B2C6BB4BB00823E6E /* MatchesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B47A2C6BB4BB00823E6E /* MatchesTests.swift */; };
+		B912B47D2C6BB57800823E6E /* Ticket+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B47C2C6BB57800823E6E /* Ticket+Extensions.swift */; };
+		B912B47F2C6BB58D00823E6E /* Draw+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B47E2C6BB58D00823E6E /* Draw+Extensions.swift */; };
+		B912B4812C6BB5D800823E6E /* TicketExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4802C6BB5D800823E6E /* TicketExtensionTests.swift */; };
 		B9FE57412C6A4D0100F61A78 /* MkodoTechTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57402C6A4D0100F61A78 /* MkodoTechTestApp.swift */; };
-		B9FE57432C6A4D0100F61A78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57422C6A4D0100F61A78 /* ContentView.swift */; };
+		B9FE57432C6A4D0100F61A78 /* AllResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57422C6A4D0100F61A78 /* AllResultsView.swift */; };
 		B9FE57452C6A4D0500F61A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9FE57442C6A4D0500F61A78 /* Assets.xcassets */; };
 		B9FE57482C6A4D0500F61A78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9FE57472C6A4D0500F61A78 /* Preview Assets.xcassets */; };
-		B9FE57522C6A4D0500F61A78 /* MkodoTechTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57512C6A4D0500F61A78 /* MkodoTechTestTests.swift */; };
-		B9FE575C2C6A4D0500F61A78 /* MkodoTechTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE575B2C6A4D0500F61A78 /* MkodoTechTestUITests.swift */; };
-		B9FE575E2C6A4D0500F61A78 /* MkodoTechTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE575D2C6A4D0500F61A78 /* MkodoTechTestUITestsLaunchTests.swift */; };
+		B9FE57522C6A4D0500F61A78 /* AllResultsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57512C6A4D0500F61A78 /* AllResultsViewModelTests.swift */; };
+		B9FE576B2C6A4E3200F61A78 /* AllResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE576A2C6A4E3200F61A78 /* AllResultsViewModel.swift */; };
+		B9FE576E2C6A4E6F00F61A78 /* Draws.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE576D2C6A4E6F00F61A78 /* Draws.swift */; };
+		B9FE57712C6A51AF00F61A78 /* LottoResultsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57702C6A51AF00F61A78 /* LottoResultsApiService.swift */; };
+		B9FE57732C6A531500F61A78 /* StubLottoResultsData.json in Resources */ = {isa = PBXBuildFile; fileRef = B9FE57722C6A531500F61A78 /* StubLottoResultsData.json */; };
+		B9FE57752C6A574500F61A78 /* StubDataLottoResultsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57742C6A574500F61A78 /* StubDataLottoResultsApiService.swift */; };
+		B9FE57772C6A576600F61A78 /* ApiServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57762C6A576600F61A78 /* ApiServiceError.swift */; };
+		B9FE577B2C6A58E600F61A78 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE577A2C6A58E600F61A78 /* ResultView.swift */; };
+		B9FE577D2C6A595000F61A78 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE577C2C6A595000F61A78 /* ResultViewModel.swift */; };
+		B9FE57802C6A5C2100F61A78 /* DateViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE577F2C6A5C2100F61A78 /* DateViewModifier.swift */; };
+		B9FE57832C6A9A4E00F61A78 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57822C6A9A4E00F61A78 /* DateFormatter+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,26 +69,63 @@
 			remoteGlobalIDString = B9FE573C2C6A4D0100F61A78;
 			remoteInfo = MkodoTechTest;
 		};
-		B9FE57582C6A4D0500F61A78 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9FE57352C6A4D0100F61A78 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B9FE573C2C6A4D0100F61A78;
-			remoteInfo = MkodoTechTest;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B906A6872C6A9F94006ED5AB /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
+		B906A68A2C6A9FF0006ED5AB /* ResultViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModelTests.swift; sourceTree = "<group>"; };
+		B906A68D2C6AA020006ED5AB /* DateFormatterExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtensionsTests.swift; sourceTree = "<group>"; };
+		B906A6902C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataLottoResultsApiServiceTests.swift; sourceTree = "<group>"; };
+		B906A6922C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoResultsApiServiceSpy.swift; sourceTree = "<group>"; };
+		B906A6942C6AA66F006ED5AB /* FaultyJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FaultyJSON.json; sourceTree = "<group>"; };
+		B906A6972C6B4ADC006ED5AB /* InvalidDates.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InvalidDates.json; sourceTree = "<group>"; };
+		B906A6992C6B4FE3006ED5AB /* ResultDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailView.swift; sourceTree = "<group>"; };
+		B906A69B2C6B4FF1006ED5AB /* ResultDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailViewModel.swift; sourceTree = "<group>"; };
+		B906A69D2C6B513D006ED5AB /* OutcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeView.swift; sourceTree = "<group>"; };
+		B906A69F2C6B518C006ED5AB /* OutcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeViewModel.swift; sourceTree = "<group>"; };
+		B906A6A12C6B555B006ED5AB /* PrizeTitleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeTitleViewModifier.swift; sourceTree = "<group>"; };
+		B906A6A32C6B5D4B006ED5AB /* BallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallView.swift; sourceTree = "<group>"; };
+		B906A6A52C6B5E53006ED5AB /* BallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallViewModel.swift; sourceTree = "<group>"; };
+		B906A6A72C6B69D8006ED5AB /* ResultDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailViewModelTests.swift; sourceTree = "<group>"; };
+		B906A6A92C6B6A08006ED5AB /* Draw+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Draw+Extensions.swift"; sourceTree = "<group>"; };
+		B906A6AB2C6B6D71006ED5AB /* DrawExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawExtensionsTests.swift; sourceTree = "<group>"; };
+		B906A6AD2C6B8687006ED5AB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B906A6B32C6B8718006ED5AB /* MyTicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsView.swift; sourceTree = "<group>"; };
+		B906A6B62C6B872A006ED5AB /* MyTicketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewModel.swift; sourceTree = "<group>"; };
+		B906A6B82C6B88A7006ED5AB /* StubMyTicketsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StubMyTicketsData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		B906A6BB2C6B8A17006ED5AB /* Tickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets.swift; sourceTree = "<group>"; };
+		B906A6BD2C6B8A6A006ED5AB /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		B906A6BF2C6B8AAF006ED5AB /* MyTicketsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsApiService.swift; sourceTree = "<group>"; };
+		B906A6C12C6B8B04006ED5AB /* StubDataMyTicketsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataMyTicketsApiService.swift; sourceTree = "<group>"; };
+		B912B4692C6B90E900823E6E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B912B46B2C6BA31800823E6E /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		B912B46D2C6BA33900823E6E /* BallViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallViewModelTests.swift; sourceTree = "<group>"; };
+		B912B46F2C6BA35800823E6E /* MyTicketsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewModelTests.swift; sourceTree = "<group>"; };
+		B912B4712C6BA37800823E6E /* StubDataMyTicketsApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataMyTicketsApiServiceTests.swift; sourceTree = "<group>"; };
+		B912B4732C6BAC7600823E6E /* MyTicketsApiServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsApiServiceSpy.swift; sourceTree = "<group>"; };
+		B912B4752C6BB11200823E6E /* Ticket+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+Extensions.swift"; sourceTree = "<group>"; };
+		B912B4772C6BB48300823E6E /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
+		B912B47A2C6BB4BB00823E6E /* MatchesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTests.swift; sourceTree = "<group>"; };
+		B912B47C2C6BB57800823E6E /* Ticket+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+Extensions.swift"; sourceTree = "<group>"; };
+		B912B47E2C6BB58D00823E6E /* Draw+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Draw+Extensions.swift"; sourceTree = "<group>"; };
+		B912B4802C6BB5D800823E6E /* TicketExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketExtensionTests.swift; sourceTree = "<group>"; };
 		B9FE573D2C6A4D0100F61A78 /* MkodoTechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MkodoTechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FE57402C6A4D0100F61A78 /* MkodoTechTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MkodoTechTestApp.swift; sourceTree = "<group>"; };
-		B9FE57422C6A4D0100F61A78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B9FE57422C6A4D0100F61A78 /* AllResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsView.swift; sourceTree = "<group>"; };
 		B9FE57442C6A4D0500F61A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9FE57472C6A4D0500F61A78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9FE574D2C6A4D0500F61A78 /* MkodoTechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MkodoTechTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9FE57512C6A4D0500F61A78 /* MkodoTechTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MkodoTechTestTests.swift; sourceTree = "<group>"; };
-		B9FE57572C6A4D0500F61A78 /* MkodoTechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MkodoTechTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9FE575B2C6A4D0500F61A78 /* MkodoTechTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MkodoTechTestUITests.swift; sourceTree = "<group>"; };
-		B9FE575D2C6A4D0500F61A78 /* MkodoTechTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MkodoTechTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B9FE57512C6A4D0500F61A78 /* AllResultsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsViewModelTests.swift; sourceTree = "<group>"; };
+		B9FE576A2C6A4E3200F61A78 /* AllResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsViewModel.swift; sourceTree = "<group>"; };
+		B9FE576D2C6A4E6F00F61A78 /* Draws.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draws.swift; sourceTree = "<group>"; };
+		B9FE57702C6A51AF00F61A78 /* LottoResultsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoResultsApiService.swift; sourceTree = "<group>"; };
+		B9FE57722C6A531500F61A78 /* StubLottoResultsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StubLottoResultsData.json; sourceTree = "<group>"; };
+		B9FE57742C6A574500F61A78 /* StubDataLottoResultsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataLottoResultsApiService.swift; sourceTree = "<group>"; };
+		B9FE57762C6A576600F61A78 /* ApiServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceError.swift; sourceTree = "<group>"; };
+		B9FE577A2C6A58E600F61A78 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		B9FE577C2C6A595000F61A78 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		B9FE577F2C6A5C2100F61A78 /* DateViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModifier.swift; sourceTree = "<group>"; };
+		B9FE57822C6A9A4E00F61A78 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,22 +143,123 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9FE57542C6A4D0500F61A78 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B906A6892C6A9FD6006ED5AB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B9FE57512C6A4D0500F61A78 /* AllResultsViewModelTests.swift */,
+				B906A68A2C6A9FF0006ED5AB /* ResultViewModelTests.swift */,
+				B906A6A72C6B69D8006ED5AB /* ResultDetailViewModelTests.swift */,
+				B912B46B2C6BA31800823E6E /* MainViewModelTests.swift */,
+				B912B46D2C6BA33900823E6E /* BallViewModelTests.swift */,
+				B912B46F2C6BA35800823E6E /* MyTicketsViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B906A68C2C6AA006006ED5AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B906A68D2C6AA020006ED5AB /* DateFormatterExtensionsTests.swift */,
+				B906A6A92C6B6A08006ED5AB /* Draw+Extensions.swift */,
+				B906A6AB2C6B6D71006ED5AB /* DrawExtensionsTests.swift */,
+				B912B4752C6BB11200823E6E /* Ticket+Extensions.swift */,
+				B912B4802C6BB5D800823E6E /* TicketExtensionTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B906A68F2C6AA076006ED5AB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B906A6902C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift */,
+				B906A6922C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift */,
+				B912B4712C6BA37800823E6E /* StubDataMyTicketsApiServiceTests.swift */,
+				B912B4732C6BAC7600823E6E /* MyTicketsApiServiceSpy.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B906A6962C6AA8BC006ED5AB /* JSONFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B906A6942C6AA66F006ED5AB /* FaultyJSON.json */,
+				B906A6972C6B4ADC006ED5AB /* InvalidDates.json */,
+			);
+			path = JSONFiles;
+			sourceTree = "<group>";
+		};
+		B906A6AF2C6B86BE006ED5AB /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				B9FE57852C6A9BFA00F61A78 /* ViewModels */,
+				B9FE57422C6A4D0100F61A78 /* AllResultsView.swift */,
+				B9FE577A2C6A58E600F61A78 /* ResultView.swift */,
+				B906A6992C6B4FE3006ED5AB /* ResultDetailView.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		B906A6B02C6B86D4006ED5AB /* CommonComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B906A6B12C6B86E7006ED5AB /* ViewModels */,
+				B906A69D2C6B513D006ED5AB /* OutcomeView.swift */,
+				B906A6A32C6B5D4B006ED5AB /* BallView.swift */,
+			);
+			path = CommonComponents;
+			sourceTree = "<group>";
+		};
+		B906A6B12C6B86E7006ED5AB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B906A69F2C6B518C006ED5AB /* OutcomeViewModel.swift */,
+				B906A6A52C6B5E53006ED5AB /* BallViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B906A6B22C6B86FC006ED5AB /* MyTickets */ = {
+			isa = PBXGroup;
+			children = (
+				B906A6B52C6B871C006ED5AB /* ViewModels */,
+				B906A6B32C6B8718006ED5AB /* MyTicketsView.swift */,
+			);
+			path = MyTickets;
+			sourceTree = "<group>";
+		};
+		B906A6B52C6B871C006ED5AB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B906A6B62C6B872A006ED5AB /* MyTicketsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B906A6BA2C6B8968006ED5AB /* StubData */ = {
+			isa = PBXGroup;
+			children = (
+				B9FE57722C6A531500F61A78 /* StubLottoResultsData.json */,
+				B906A6B82C6B88A7006ED5AB /* StubMyTicketsData.json */,
+			);
+			path = StubData;
+			sourceTree = "<group>";
+		};
+		B912B4792C6BB4AD00823E6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B912B47A2C6BB4BB00823E6E /* MatchesTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B9FE57342C6A4D0100F61A78 = {
 			isa = PBXGroup;
 			children = (
 				B9FE573F2C6A4D0100F61A78 /* MkodoTechTest */,
 				B9FE57502C6A4D0500F61A78 /* MkodoTechTestTests */,
-				B9FE575A2C6A4D0500F61A78 /* MkodoTechTestUITests */,
 				B9FE573E2C6A4D0100F61A78 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +269,6 @@
 			children = (
 				B9FE573D2C6A4D0100F61A78 /* MkodoTechTest.app */,
 				B9FE574D2C6A4D0500F61A78 /* MkodoTechTestTests.xctest */,
-				B9FE57572C6A4D0500F61A78 /* MkodoTechTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,7 +277,12 @@
 			isa = PBXGroup;
 			children = (
 				B9FE57402C6A4D0100F61A78 /* MkodoTechTestApp.swift */,
-				B9FE57422C6A4D0100F61A78 /* ContentView.swift */,
+				B9FE57842C6A9BEF00F61A78 /* Views */,
+				B9FE57812C6A9A2D00F61A78 /* Extensions */,
+				B9FE577E2C6A5BFF00F61A78 /* ViewModifiers */,
+				B9FE576C2C6A4E5C00F61A78 /* Models */,
+				B9FE576F2C6A519800F61A78 /* Networking */,
+				B906A6BA2C6B8968006ED5AB /* StubData */,
 				B9FE57442C6A4D0500F61A78 /* Assets.xcassets */,
 				B9FE57462C6A4D0500F61A78 /* Preview Content */,
 			);
@@ -113,18 +300,78 @@
 		B9FE57502C6A4D0500F61A78 /* MkodoTechTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				B9FE57512C6A4D0500F61A78 /* MkodoTechTestTests.swift */,
+				B912B4792C6BB4AD00823E6E /* Models */,
+				B906A6962C6AA8BC006ED5AB /* JSONFiles */,
+				B906A68F2C6AA076006ED5AB /* Networking */,
+				B906A68C2C6AA006006ED5AB /* Extensions */,
+				B906A6892C6A9FD6006ED5AB /* ViewModels */,
 			);
 			path = MkodoTechTestTests;
 			sourceTree = "<group>";
 		};
-		B9FE575A2C6A4D0500F61A78 /* MkodoTechTestUITests */ = {
+		B9FE576C2C6A4E5C00F61A78 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B9FE575B2C6A4D0500F61A78 /* MkodoTechTestUITests.swift */,
-				B9FE575D2C6A4D0500F61A78 /* MkodoTechTestUITestsLaunchTests.swift */,
+				B912B4772C6BB48300823E6E /* Matches.swift */,
+				B9FE576D2C6A4E6F00F61A78 /* Draws.swift */,
+				B906A6872C6A9F94006ED5AB /* Draw.swift */,
+				B906A6BB2C6B8A17006ED5AB /* Tickets.swift */,
+				B906A6BD2C6B8A6A006ED5AB /* Ticket.swift */,
 			);
-			path = MkodoTechTestUITests;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9FE576F2C6A519800F61A78 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B9FE57702C6A51AF00F61A78 /* LottoResultsApiService.swift */,
+				B906A6BF2C6B8AAF006ED5AB /* MyTicketsApiService.swift */,
+				B9FE57742C6A574500F61A78 /* StubDataLottoResultsApiService.swift */,
+				B906A6C12C6B8B04006ED5AB /* StubDataMyTicketsApiService.swift */,
+				B9FE57762C6A576600F61A78 /* ApiServiceError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B9FE577E2C6A5BFF00F61A78 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				B9FE577F2C6A5C2100F61A78 /* DateViewModifier.swift */,
+				B906A6A12C6B555B006ED5AB /* PrizeTitleViewModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		B9FE57812C6A9A2D00F61A78 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B9FE57822C6A9A4E00F61A78 /* DateFormatter+Extensions.swift */,
+				B912B47E2C6BB58D00823E6E /* Draw+Extensions.swift */,
+				B912B47C2C6BB57800823E6E /* Ticket+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B9FE57842C6A9BEF00F61A78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B906A6AD2C6B8687006ED5AB /* MainView.swift */,
+				B912B4692C6B90E900823E6E /* MainViewModel.swift */,
+				B906A6AF2C6B86BE006ED5AB /* Results */,
+				B906A6B22C6B86FC006ED5AB /* MyTickets */,
+				B906A6B02C6B86D4006ED5AB /* CommonComponents */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9FE57852C6A9BFA00F61A78 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B9FE576A2C6A4E3200F61A78 /* AllResultsViewModel.swift */,
+				B9FE577C2C6A595000F61A78 /* ResultViewModel.swift */,
+				B906A69B2C6B4FF1006ED5AB /* ResultDetailViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +412,6 @@
 			productReference = B9FE574D2C6A4D0500F61A78 /* MkodoTechTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B9FE57562C6A4D0500F61A78 /* MkodoTechTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B9FE57672C6A4D0500F61A78 /* Build configuration list for PBXNativeTarget "MkodoTechTestUITests" */;
-			buildPhases = (
-				B9FE57532C6A4D0500F61A78 /* Sources */,
-				B9FE57542C6A4D0500F61A78 /* Frameworks */,
-				B9FE57552C6A4D0500F61A78 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B9FE57592C6A4D0500F61A78 /* PBXTargetDependency */,
-			);
-			name = MkodoTechTestUITests;
-			productName = MkodoTechTestUITests;
-			productReference = B9FE57572C6A4D0500F61A78 /* MkodoTechTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +426,6 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					B9FE574C2C6A4D0500F61A78 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = B9FE573C2C6A4D0100F61A78;
-					};
-					B9FE57562C6A4D0500F61A78 = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = B9FE573C2C6A4D0100F61A78;
 					};
@@ -221,7 +446,6 @@
 			targets = (
 				B9FE573C2C6A4D0100F61A78 /* MkodoTechTest */,
 				B9FE574C2C6A4D0500F61A78 /* MkodoTechTestTests */,
-				B9FE57562C6A4D0500F61A78 /* MkodoTechTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +457,8 @@
 			files = (
 				B9FE57482C6A4D0500F61A78 /* Preview Assets.xcassets in Resources */,
 				B9FE57452C6A4D0500F61A78 /* Assets.xcassets in Resources */,
+				B906A6B92C6B88A7006ED5AB /* StubMyTicketsData.json in Resources */,
+				B9FE57732C6A531500F61A78 /* StubLottoResultsData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,13 +466,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9FE57552C6A4D0500F61A78 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				B906A6952C6AA66F006ED5AB /* FaultyJSON.json in Resources */,
+				B906A6982C6B4ADC006ED5AB /* InvalidDates.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +478,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9FE57432C6A4D0100F61A78 /* ContentView.swift in Sources */,
+				B906A6BC2C6B8A17006ED5AB /* Tickets.swift in Sources */,
+				B912B4782C6BB48300823E6E /* Matches.swift in Sources */,
+				B912B47D2C6BB57800823E6E /* Ticket+Extensions.swift in Sources */,
+				B906A69E2C6B513D006ED5AB /* OutcomeView.swift in Sources */,
+				B906A6B42C6B8718006ED5AB /* MyTicketsView.swift in Sources */,
+				B9FE576B2C6A4E3200F61A78 /* AllResultsViewModel.swift in Sources */,
+				B9FE577D2C6A595000F61A78 /* ResultViewModel.swift in Sources */,
+				B9FE57432C6A4D0100F61A78 /* AllResultsView.swift in Sources */,
+				B906A6882C6A9F94006ED5AB /* Draw.swift in Sources */,
+				B9FE57802C6A5C2100F61A78 /* DateViewModifier.swift in Sources */,
+				B9FE57752C6A574500F61A78 /* StubDataLottoResultsApiService.swift in Sources */,
+				B9FE57712C6A51AF00F61A78 /* LottoResultsApiService.swift in Sources */,
 				B9FE57412C6A4D0100F61A78 /* MkodoTechTestApp.swift in Sources */,
+				B906A6A42C6B5D4B006ED5AB /* BallView.swift in Sources */,
+				B906A6A02C6B518C006ED5AB /* OutcomeViewModel.swift in Sources */,
+				B9FE577B2C6A58E600F61A78 /* ResultView.swift in Sources */,
+				B906A6C22C6B8B05006ED5AB /* StubDataMyTicketsApiService.swift in Sources */,
+				B906A69A2C6B4FE3006ED5AB /* ResultDetailView.swift in Sources */,
+				B906A6B72C6B872A006ED5AB /* MyTicketsViewModel.swift in Sources */,
+				B912B46A2C6B90E900823E6E /* MainViewModel.swift in Sources */,
+				B906A6AE2C6B8687006ED5AB /* MainView.swift in Sources */,
+				B906A69C2C6B4FF1006ED5AB /* ResultDetailViewModel.swift in Sources */,
+				B9FE57772C6A576600F61A78 /* ApiServiceError.swift in Sources */,
+				B906A6BE2C6B8A6A006ED5AB /* Ticket.swift in Sources */,
+				B9FE57832C6A9A4E00F61A78 /* DateFormatter+Extensions.swift in Sources */,
+				B906A6A22C6B555B006ED5AB /* PrizeTitleViewModifier.swift in Sources */,
+				B9FE576E2C6A4E6F00F61A78 /* Draws.swift in Sources */,
+				B912B47F2C6BB58D00823E6E /* Draw+Extensions.swift in Sources */,
+				B906A6A62C6B5E53006ED5AB /* BallViewModel.swift in Sources */,
+				B906A6C02C6B8AAF006ED5AB /* MyTicketsApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,16 +515,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9FE57522C6A4D0500F61A78 /* MkodoTechTestTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9FE57532C6A4D0500F61A78 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B9FE575C2C6A4D0500F61A78 /* MkodoTechTestUITests.swift in Sources */,
-				B9FE575E2C6A4D0500F61A78 /* MkodoTechTestUITestsLaunchTests.swift in Sources */,
+				B912B47B2C6BB4BB00823E6E /* MatchesTests.swift in Sources */,
+				B906A68E2C6AA020006ED5AB /* DateFormatterExtensionsTests.swift in Sources */,
+				B9FE57522C6A4D0500F61A78 /* AllResultsViewModelTests.swift in Sources */,
+				B906A6A82C6B69D8006ED5AB /* ResultDetailViewModelTests.swift in Sources */,
+				B906A6AA2C6B6A08006ED5AB /* Draw+Extensions.swift in Sources */,
+				B912B4722C6BA37800823E6E /* StubDataMyTicketsApiServiceTests.swift in Sources */,
+				B906A6932C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift in Sources */,
+				B906A6AC2C6B6D71006ED5AB /* DrawExtensionsTests.swift in Sources */,
+				B912B4702C6BA35800823E6E /* MyTicketsViewModelTests.swift in Sources */,
+				B912B4812C6BB5D800823E6E /* TicketExtensionTests.swift in Sources */,
+				B912B46C2C6BA31800823E6E /* MainViewModelTests.swift in Sources */,
+				B912B4762C6BB11200823E6E /* Ticket+Extensions.swift in Sources */,
+				B906A6912C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift in Sources */,
+				B906A68B2C6A9FF0006ED5AB /* ResultViewModelTests.swift in Sources */,
+				B912B4742C6BAC7600823E6E /* MyTicketsApiServiceSpy.swift in Sources */,
+				B912B46E2C6BA33900823E6E /* BallViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,11 +541,6 @@
 			isa = PBXTargetDependency;
 			target = B9FE573C2C6A4D0100F61A78 /* MkodoTechTest */;
 			targetProxy = B9FE574E2C6A4D0500F61A78 /* PBXContainerItemProxy */;
-		};
-		B9FE57592C6A4D0500F61A78 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B9FE573C2C6A4D0100F61A78 /* MkodoTechTest */;
-			targetProxy = B9FE57582C6A4D0500F61A78 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -512,42 +762,6 @@
 			};
 			name = Release;
 		};
-		B9FE57682C6A4D0500F61A78 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AQYT3RN82U;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adrianogimenez.MkodoTechTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MkodoTechTest;
-			};
-			name = Debug;
-		};
-		B9FE57692C6A4D0500F61A78 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AQYT3RN82U;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adrianogimenez.MkodoTechTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MkodoTechTest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -574,15 +788,6 @@
 			buildConfigurations = (
 				B9FE57652C6A4D0500F61A78 /* Debug */,
 				B9FE57662C6A4D0500F61A78 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B9FE57672C6A4D0500F61A78 /* Build configuration list for PBXNativeTarget "MkodoTechTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B9FE57682C6A4D0500F61A78 /* Debug */,
-				B9FE57692C6A4D0500F61A78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

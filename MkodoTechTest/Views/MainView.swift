@@ -1,0 +1,34 @@
+//
+//  MainView.swift
+//  MkodoTechTest
+//
+//  Created by Adriano Gimenez on 13/08/2024.
+//
+
+import SwiftUI
+
+struct MainView: View {
+
+    @State var viewModel = MainViewModel()
+
+    var body: some View {
+        TabView {
+            AllResultsView(viewModel: viewModel.allResultsViewModel)
+                .tabItem {
+                    Label("Results", systemImage: "list.dash")
+                }
+
+            MyTicketsView(viewModel: viewModel.myTicketsViewModel)
+                .tabItem {
+                    Label("My Tickets", systemImage: "ticket.fill")
+                }
+        }
+        .task {
+            await viewModel.getResults()
+        }
+    }
+}
+
+#Preview {
+    MainView()
+}

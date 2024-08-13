@@ -1,0 +1,59 @@
+{
+    "tickets": [
+        {
+            "id": "ticket-1",
+            "drawId": "draw-1",
+            "number1": "2",
+            "number2": "16",
+            "number3": "23",
+            "number4": "44",
+            "number5": "47",
+            "number6": "52",
+            "bonusBall": "14"
+        },
+        {
+            "id": "ticket-2",
+            "drawId": "draw-1",
+            "number1": "2",
+            "number2": "36",
+            "number3": "5",
+            "number4": "81",
+            "number5": "37",
+            "number6": "25",
+            "bonusBall": "1"
+        },
+        {
+            "id": "ticket-3",
+            "drawId": "draw-2",
+            "number1": "5",
+            "number2": "45",
+            "number3": "51",
+            "number4": "32",
+            "number5": "24",
+            "number6": "18",
+            "bonusBall": "2"
+        },
+        {
+            "id": "ticket-4",
+            "drawId": "draw-3",
+            "number1": "4",
+            "number2": "24",
+            "number3": "14",
+            "number4": "5",
+            "number5": "10",
+            "number6": "15",
+            "bonusBall": "51"
+        },
+        {
+            "id": "ticket-5",
+            "drawId": "draw-4",
+            "number1": "1",
+            "number2": "2",
+            "number3": "3",
+            "number4": "4",
+            "number5": "5",
+            "number6": "6",
+            "bonusBall": "10"
+        }
+    ]
+}
