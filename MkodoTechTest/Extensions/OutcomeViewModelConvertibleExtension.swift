@@ -1,5 +1,5 @@
 //
-//  Ticket+Extensions.swift
+//  Draw+Extensions.swift
 //  MkodoTechTest
 //
 //  Created by Adriano Gimenez on 13/08/2024.
@@ -7,7 +7,17 @@
 
 import Foundation
 
-extension Ticket {
+protocol OutcomeViewModelConvertible {
+    var number1: String { get set }
+    var number2: String { get set }
+    var number3: String { get set }
+    var number4: String { get set }
+    var number5: String { get set }
+    var number6: String { get set }
+    var bonusBall: String { get set }
+}
+
+extension OutcomeViewModelConvertible {
 
     func makeOutcomeViewModel() -> OutcomeViewModel {
         OutcomeViewModel(number1: number1,
@@ -19,3 +29,6 @@ extension Ticket {
                          bonusBall: bonusBall)
     }
 }
+
+extension Draw: OutcomeViewModelConvertible { }
+extension Ticket: OutcomeViewModelConvertible { }

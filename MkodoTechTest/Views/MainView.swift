@@ -15,16 +15,19 @@ struct MainView: View {
         TabView {
             AllResultsView(viewModel: viewModel.allResultsViewModel)
                 .tabItem {
-                    Label("Results", systemImage: "list.dash")
+                    Label(viewModel.resultsTabName, systemImage: viewModel.resultsImageName)
                 }
 
             MyTicketsView(viewModel: viewModel.myTicketsViewModel)
                 .tabItem {
-                    Label("My Tickets", systemImage: "ticket.fill")
+                    Label(viewModel.myTicketsTabName, systemImage: viewModel.myTicketsImageName)
                 }
         }
         .task {
             await viewModel.getResults()
+        }
+        .alert(isPresented: $viewModel.isErrorPresented) {
+            Alert(title: Text(viewModel.error?.description ?? "Error"))
         }
     }
 }

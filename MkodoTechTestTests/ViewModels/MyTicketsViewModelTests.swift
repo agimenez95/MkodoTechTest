@@ -15,52 +15,52 @@ final class MyTicketsViewModelTests: XCTestCase {
         XCTAssertNotNil(sut)
     }
 
-    func testMyTicketsViewModel_sections_isEmpty_false() async throws {
-        let sut = MyTicketsViewModel()
-        try await sut.getTickets()
+    func testMyTicketsViewModel_sections_isEmpty_false() async {
+        let sut = MyTicketsViewModelFactory.makeMyTicketsViewModel()
+        await sut.getTickets()
         XCTAssertFalse(sut.sections.isEmpty)
     }
 
-    func testMyTicketsViewModel_getTickets_calls_getMyTickets_in_MyTicketsApiService() async throws {
+    func testMyTicketsViewModel_getTickets_calls_getMyTickets_in_MyTicketsApiService() async {
         let apiServiceSpy = MyTicketsApiServiceSpy()
-        let sut = MyTicketsViewModel(myTicketsApiService: apiServiceSpy)
+        let sut = MyTicketsViewModelFactory.makeMyTicketsViewModel(myTicketsApiService: apiServiceSpy)
         XCTAssertFalse(apiServiceSpy.didCallGetMyTickets)
 
-        try await sut.getTickets()
+        await sut.getTickets()
         XCTAssertTrue(apiServiceSpy.didCallGetMyTickets)
     }
 
-    func testMyTicketsViewModel_Upcoming_SectionName() async throws {
-        let sut = MyTicketsViewModel()
-        try await sut.getTickets()
+    func testMyTicketsViewModel_Upcoming_SectionType() async  {
+        let sut = MyTicketsViewModelFactory.makeMyTicketsViewModel()
+        await sut.getTickets()
         XCTAssertEqual(sut.sections.count, 1)
-        XCTAssertEqual(sut.sections[0], "Upcoming")
+        XCTAssertEqual(sut.sections[0], .upcoming)
     }
 
-    func testMyTicketsViewModel_ticketsInSectionName_Upcoming() async throws {
-        let sut = MyTicketsViewModel()
-        try await sut.getTickets()
-        XCTAssertEqual(sut.tickets(in: "Upcoming").count, 5)
+    func testMyTicketsViewModel_ticketsInSectionName_Upcoming() async {
+        let sut = MyTicketsViewModelFactory.makeMyTicketsViewModel()
+        await sut.getTickets()
+        XCTAssertEqual(sut.tickets(in: .upcoming).count, 5)
     }
 
-    func testMyTicketsViewModel_ticketsInSectionName_withMatchingDate() async throws {
-        let sut = MyTicketsViewModel(draws: [.makeStub()])
-        try await sut.getTickets()
-        XCTAssertEqual(sut.tickets(in: "13/08/2024").count, 2)
+    func testMyTicketsViewModel_ticketsInSectionName_withMatchingDate() async {
+        let sut = MyTicketsViewModelFactory.makeMyTicketsViewModel(draws: [.makeStub()])
+        await sut.getTickets()
+        XCTAssertEqual(sut.tickets(in: .date(date: Date.makeStub)).count, 2)
     }
 
-    func testMyTicketsViewModel_ticketsInSectionName_mismatchedSectionName() async throws {
-        let sut = MyTicketsViewModel(draws: [.makeStub()])
-        try await sut.getTickets()
-        XCTAssertEqual(sut.tickets(in: "1").count, 0)
+    func testMyTicketsViewModel_ticketsInSectionName_mismatchedSectionName() async {
+        let sut = MyTicketsViewModelFactory.makeMyTicketsViewModel(draws: [.makeStub()])
+        await sut.getTickets()
+        XCTAssertEqual(sut.tickets(in: .date(date: Date(timeIntervalSince1970: 0))).count, 0)
     }
 
     func testMyTicketsViewModel_makeOutcomeViewModel_outcomeNotDrawn() async throws {
-        let sut = MyTicketsViewModel(draws: [])
-        
-        try await sut.getTickets()
+        let sut = MyTicketsViewModelFactory.makeMyTicketsViewModel(draws: [])
 
-        let firstTicket = try XCTUnwrap(sut.tickets(in: "Upcoming").first)
+        await sut.getTickets()
+
+        let firstTicket = try XCTUnwrap(sut.tickets(in: .upcoming).first)
         let viewModel = sut.makeOutcomeViewModel(for: firstTicket)
         
         XCTAssertTrue((viewModel as Any) is OutcomeViewModel)
@@ -74,11 +74,13 @@ final class MyTicketsViewModelTests: XCTestCase {
     }
 
     func testMyTicketsViewModel_makeOutcomeViewModel_outcomeDrawn() async throws {
-        let sut = MyTicketsViewModel(draws: [.makeStub()])
-        
-        try await sut.getTickets()
+        let sut = MyTicketsViewModelFactory.makeMyTicketsViewModel(draws: [.makeStub()])
 
-        let firstTicket = try XCTUnwrap(sut.tickets(in: "13/08/2024").first(where: { $0.id == "ticket-1" }))
+        await sut.getTickets()
+
+        let tickets = sut.tickets(in: .date(date: Date.makeStub))
+        let firstTicket = try XCTUnwrap(tickets.first(where: { $0.id == "ticket-1" }))
+
         let viewModel = sut.makeOutcomeViewModel(for: firstTicket)
 
         XCTAssertTrue((viewModel as Any) is OutcomeViewModel)

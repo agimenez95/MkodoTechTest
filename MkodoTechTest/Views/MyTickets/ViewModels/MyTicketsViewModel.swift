@@ -5,19 +5,32 @@
 //  Created by Adriano Gimenez on 13/08/2024.
 //
 
-import Foundation
 import Observation
+import SwiftUI
+
+enum DateSection: Hashable {
+    case date(date: Date)
+    case upcoming
+}
 
 @Observable
 final class MyTicketsViewModel {
 
-    var sections: [String] = []
+    let navigationTitle = Constant.myTickets
+    let upcomingSectionTitle = Constant.upcoming
+
+    var sections: [DateSection] = []
+
+    var isErrorPresented = false
+    var error: ApiServiceError?
 
     private var tickets: [Ticket]
     private let myTicketsApiService: MyTicketsApiService
     private var results: [String: Draw] = [:]
 
-    init(tickets: [Ticket] = [], draws: [Draw] = [], myTicketsApiService: MyTicketsApiService = StubDataMyTicketsApiService()) {
+    init(tickets: [Ticket] = [],
+         draws: [Draw] = [],
+         myTicketsApiService: MyTicketsApiService = StubDataMyTicketsApiService()) {
         self.tickets = tickets
         self.myTicketsApiService = myTicketsApiService
         for draw in draws {
@@ -27,21 +40,28 @@ final class MyTicketsViewModel {
         setSections()
     }
 
-    func getTickets() async throws {
-        tickets = try await myTicketsApiService.getMyTickets().tickets
-        setSections()
+    func getTickets() async {
+        do {
+            tickets = try await myTicketsApiService.getMyTickets().tickets
+            setSections()
+        } catch {
+            self.error = error as? ApiServiceError
+            isErrorPresented = true
+        }
     }
 
-    func tickets(in sectionName: String) -> [Ticket] {
-        if sectionName == Constant.upcoming {
+    func tickets(in sectionType: DateSection) -> [Ticket] {
+        switch sectionType {
+        case .upcoming:
             return tickets.filter { results[$0.drawId] == nil }
+        case .date(let date):
+            guard let filteredResult = results.first(where: { $0.value.drawDate == date }) else {
+                return []
+            }
+
+            return tickets.filter({ $0.drawId == filteredResult.key }).sorted(by: { $0.id > $1.id })
         }
 
-        guard let filteredResult = results.first(where: { convertDateToString(date: $0.value.drawDate) == sectionName }) else {
-            return []
-        }
-
-        return tickets.filter({ $0.drawId == filteredResult.key }).sorted(by: { $0.id > $1.id })
     }
 
     func makeOutcomeViewModel(for ticket: Ticket) -> OutcomeViewModel {
@@ -65,34 +85,28 @@ final class MyTicketsViewModel {
 private extension MyTicketsViewModel {
 
     enum Constant {
-        static let upcoming = "Upcoming"
+        static let myTickets: LocalizedStringKey = "MY_TICKETS"
+        static let upcoming: LocalizedStringKey = "UPCOMING"
     }
 
     func setSections() {
-        var newSections = [String]()
-        var addNextSection = false
+        var addUpcomingSection = false
+        var dates = Set<Date>()
 
         for ticket in tickets {
-            if let draw = results[ticket.drawId],
-               let date = draw.drawDate,
-               let dateString = convertDateToString(date: date),
-               !newSections.contains(dateString) {
-                newSections.append(dateString)
+            if let draw = results[ticket.drawId] {
+                dates.insert(draw.drawDate)
             } else {
-                addNextSection = true
+                addUpcomingSection = true
             }
         }
 
-        newSections = newSections.sorted { $0 > $1 }
+        var newSections = Array(dates).sorted(by: { $0 > $1 }).map { DateSection.date(date: $0) }
 
-        if addNextSection {
-            newSections.insert(Constant.upcoming, at: 0)
+        if addUpcomingSection {
+            newSections.insert(.upcoming, at: 0)
         }
 
         sections = newSections
-    }
-
-    func convertDateToString(date: Date?) -> String? {
-        DateFormatter().makeFormattedDateString(from: date)
     }
 }

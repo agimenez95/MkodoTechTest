@@ -7,6 +7,13 @@
 
 import Foundation
 
-protocol LottoResultsApiService: AnyObject {
+protocol LottoResultsApiService {
     func getLottoResults() async throws -> Draws
+}
+
+extension LottoResultsApiService {
+
+    var dateFormat: String {
+        "yyyy-MM-dd"
+    }
 }

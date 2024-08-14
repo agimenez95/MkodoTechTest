@@ -12,17 +12,24 @@ struct ResultView: View {
     @State var viewModel: ResultViewModel
 
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: Constant.spacing) {
             OutcomeView(viewModel: viewModel.outcomeViewModel)
                 .padding(.trailing)
 
             HStack {
-                Text(viewModel.dateText)
+                Text(viewModel.date, style: .date)
                     .dateStyle()
                 
                 Spacer()
             }
         }
+    }
+}
+
+private extension ResultView {
+
+    enum Constant {
+        static let spacing: CGFloat = 8
     }
 }
 
@@ -36,5 +43,5 @@ struct ResultView: View {
                                             number5: "5",
                                             number6: "6",
                                             bonusBall: "10",
-                                            topPrize: 1000)))
+                                            topPrize: 10_000)))
 }

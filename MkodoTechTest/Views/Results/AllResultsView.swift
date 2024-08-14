@@ -13,24 +13,21 @@ struct AllResultsView: View {
 
     var body: some View {
         NavigationStack {
-            List(viewModel.lottoResults, id: \.id) { draw in
+            List(viewModel.lottoResults) { draw in
                 NavigationLink {
                     ResultDetailView(viewModel: viewModel.makeResultDetailViewModel(for: draw))
                 } label: {
-                    ResultView(viewModel: ResultViewModel(draw: draw))
+                    ResultView(viewModel: viewModel.makeResultViewModel(for: draw))
                 }
             }
-            .navigationTitle("Lotto Results")
+            .navigationTitle(viewModel.navigationTitle)
         }
         .task {
             guard viewModel.isDataFetchNeeded else { return }
-
-            do {
-                try await viewModel.getData()
-            }
-            catch {
-                print(error)
-            }
+            await viewModel.getData()
+        }
+        .alert(isPresented: $viewModel.isErrorPresented) {
+            Alert(title: Text(viewModel.error?.description ?? "Error"))
         }
     }
 }

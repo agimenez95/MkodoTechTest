@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ticket: Decodable {
+struct Ticket: Decodable, Identifiable {
     var id: String
     var drawId: String
     var number1: String

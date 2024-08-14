@@ -14,21 +14,50 @@ struct BallView: View {
     var body: some View {
         Circle()
             .fill(viewModel.backgroundColor.gradient)
-            .stroke(viewModel.borderColor.gradient, lineWidth: 4)
+            .stroke(viewModel.borderColor.gradient, lineWidth: Constant.borderLineWidth)
             .overlay(
                 Text(viewModel.number)
-                    .font(.system(size: 20, weight: .bold))
-                    .minimumScaleFactor(0.2)
-                    .lineLimit(1)
+                    .font(Constant.font)
+                    .minimumScaleFactor(Constant.minimumScaleFactor)
+                    .lineLimit(Constant.lineLimit)
                     .foregroundColor(.black)
-                    .padding(6)
+                    .padding(Constant.padding)
             )
     }
 }
 
-#Preview {
+private extension BallView {
+
+    enum Constant {
+        static let borderLineWidth: CGFloat = 4
+        static let font: Font = .system(size: 20, weight: .bold)
+        static let minimumScaleFactor: CGFloat = 0.2
+        static let lineLimit = 1
+        static let padding: CGFloat = 6
+    }
+}
+
+#Preview("not drawn") {
     Group {
         BallView(viewModel: .init(number: "100"))
         BallView(viewModel: .init(ballState: .bonusBall(matches: .notDrawn), number: "100"))
+    }
+}
+
+#Preview("matches") {
+    Group {
+        BallView(viewModel: .init(ballState: .normal(matches: .yes),
+                                  number: "100"))
+        BallView(viewModel: .init(ballState: .bonusBall(matches: .yes),
+                                  number: "100"))
+    }
+}
+
+#Preview("mismatch") {
+    Group {
+        BallView(viewModel: .init(ballState: .normal(matches: .no),
+                                  number: "100"))
+        BallView(viewModel: .init(ballState: .bonusBall(matches: .no),
+                                  number: "100"))
     }
 }

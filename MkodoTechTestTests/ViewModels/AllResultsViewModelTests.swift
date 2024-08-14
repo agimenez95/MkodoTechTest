@@ -11,44 +11,44 @@ import XCTest
 final class AllResultsViewModelTests: XCTestCase {
 
     func testAllResultsViewModel() {
-        let sut = AllResultsViewModel()
+        let sut = ResultsViewModelFactory.makeAllResultsViewModel()
         XCTAssertNotNil(sut)
     }
 
-    func testAllResultsViewModel_getData_lottoResults_dateNewestFirst() async throws {
-        let sut = AllResultsViewModel()
-        try await sut.getData()
+    func testAllResultsViewModel_getData_lottoResults_dateNewestFirst() async {
+        let sut = ResultsViewModelFactory.makeAllResultsViewModel()
+        await sut.getData()
         XCTAssertEqual(sut.lottoResults.count, 3)
 
-        guard let date0 = sut.lottoResults[0].drawDate,
-              let date1 = sut.lottoResults[1].drawDate,
-              let date2 = sut.lottoResults[2].drawDate else {
-            XCTFail("All of the dates provided should be decodable")
-            return
-        }
+        let date0 = sut.lottoResults[0].drawDate
+        let date1 = sut.lottoResults[1].drawDate
+        let date2 = sut.lottoResults[2].drawDate
+        
         XCTAssertGreaterThan(date0, date1)
         XCTAssertGreaterThan(date1, date2)
     }
 
-    func testAllResultsViewModel_getData_lottoResults_withInvalidDate_orderedAsTheyCome() async throws {
-        let apiService = StubDataLottoResultsApiService(bundle: Bundle(for: type(of: self)), fileName: "InvalidDates")
-        let sut = AllResultsViewModel(lottoResultsApiService: apiService)
-        try await sut.getData()
-        XCTAssertEqual(sut.lottoResults.count, 3)
-        XCTAssertNil(sut.lottoResults[0].drawDate)
-        XCTAssertNotNil(sut.lottoResults[1].drawDate)
-        XCTAssertNil(sut.lottoResults[2].drawDate)
-        XCTAssertEqual(sut.lottoResults[0].id, "draw-1")
-        XCTAssertEqual(sut.lottoResults[1].id, "draw-2")
-        XCTAssertEqual(sut.lottoResults[2].id, "draw-3")
+    func testAllResultsViewModel_getData_lottoResults_withInvalidDate_throwsError() async {
+        let apiService = StubDataLottoResultsApiService(bundle: Bundle(for: type(of: self)),
+                                                        fileName: Constant.invalidDatesJSONFileName)
+        let sut = ResultsViewModelFactory.makeAllResultsViewModel(apiService: apiService)
+        await sut.getData()
+        XCTAssertEqual(sut.error, .decodingError)
     }
 
-    func testAllResultsViewModel_getData_calls_getLottoResults_in_LottoResultsApiService() async throws {
+    func testAllResultsViewModel_getData_calls_getLottoResults_in_LottoResultsApiService() async {
         let apiServiceSpy = LottoResultsApiServiceSpy()
-        let sut = AllResultsViewModel(lottoResultsApiService: apiServiceSpy)
+        let sut = ResultsViewModelFactory.makeAllResultsViewModel(apiService: apiServiceSpy)
         XCTAssertFalse(apiServiceSpy.didCallGetLottoResults)
         
-        try await sut.getData()
+        await sut.getData()
         XCTAssertTrue(apiServiceSpy.didCallGetLottoResults)
+    }
+}
+
+private extension AllResultsViewModelTests {
+
+    enum Constant {
+        static let invalidDatesJSONFileName = "InvalidDates"
     }
 }

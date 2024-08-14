@@ -11,8 +11,8 @@ import Observation
 @Observable
 final class ResultViewModel {
 
-    var dateText: String {
-        dateFormatter.makeFormattedDateString(from: draw.drawDate) ?? ""
+    var date: Date {
+        draw.drawDate
     }
 
     var outcomeViewModel: OutcomeViewModel {

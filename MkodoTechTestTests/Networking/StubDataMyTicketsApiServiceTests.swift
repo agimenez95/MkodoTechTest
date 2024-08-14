@@ -87,7 +87,7 @@ final class StubDataMyTicketsApiServiceTests: XCTestCase {
 
         do {
             _ = try await sut.getMyTickets()
-            XCTFail("The line above should error since the file is missing.")
+            XCTFail("The line above should error since the JSON is faulty.")
         } catch {
             XCTAssertEqual(error as? ApiServiceError, ApiServiceError.decodingError)
         }

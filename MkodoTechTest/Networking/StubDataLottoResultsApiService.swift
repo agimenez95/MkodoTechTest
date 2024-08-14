@@ -22,10 +22,17 @@ final class StubDataLottoResultsApiService: LottoResultsApiService {
             throw ApiServiceError.missingFileError
         }
 
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
+
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path))
-            return try JSONDecoder().decode(Draws.self, from: data)
+            return try decoder.decode(Draws.self, from: data)
         } catch {
+            print(error)
             throw ApiServiceError.decodingError
         }
     }

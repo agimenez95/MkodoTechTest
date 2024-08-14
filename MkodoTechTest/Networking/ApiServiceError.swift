@@ -10,4 +10,13 @@ import Foundation
 enum ApiServiceError: Error {
     case decodingError
     case missingFileError
+
+    var description: String {
+        switch self {
+        case .decodingError:
+            "There is a problem decoding the file"
+        case .missingFileError:
+            "The file is missing"
+        }
+    }
 }

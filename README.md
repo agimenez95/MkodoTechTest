@@ -1,6 +1,6 @@
-# Mkodo Technical test
+# Mkodo Technical Test
 
-Hi! My name is Adriano and this is my submission for the Tech Test for the Senior iOS Software Engineer position at Mkodo.
+Hi! My name is Adriano and this is my submission for the technical test for the Senior iOS Software Engineer position at Mkodo.
 
 
 ## Tech Stack
@@ -24,7 +24,7 @@ Hi! My name is Adriano and this is my submission for the Tech Test for the Senio
 ### Additional tasks
 4. **Detail View for Each Draw**: Implement a detail view for each lottery draw, showing all numbers and the bonus ball.
     - I re-used components from the List to display to show the lottery result.
-    - ViewModifier was used to setup the prize amount. I did this because it seemed like a style that we would want to match in other places in the larger context of the product.
+    - A `ViewModifier` was used to setup the prize amount style. I did this because it seemed like a style that we would want to match in other places in the larger context of the product.
 5. **Lottery Tickets**: Implement a 'ticket view' that shows some randomly generated lottery tickets and if they have won or not.
     - Randomly generating a random ticket gave me too many questions:
         - To what draw would these tickets belong to?
@@ -40,24 +40,28 @@ Hi! My name is Adriano and this is my submission for the Tech Test for the Senio
     - The `ResultDetailsView` is also a `NavigationLink` which will push itself onto the `NavigationStack`.
     - I thought the default navigation behaviours would be suitable to show the content.
 7. **Additional Tests**: Add more thorough testing and improve test coverage.
-    - Code coverage is **92%**
+    - Code coverage is **90%**
     - I focused on covering edge cases with tests.
     - The Ticket models are tested to make sure that we are fetching and decoding the data correctly.
     - I also had to test the ordering of the data was consistent (most recent first). 
     - If I had more time I would have considered adding UI tests or even snapshot tests. This would ensure that future UI changes will be made with purpose and make sure new features don't _accidentally_ change existing ones.
-    
---------------- 
-#### Tasks yet to be completed
 8. **Interactive Navigation**: Implement swipe gestures to navigate between different draw details.
     - With the default `NavigationStack` we get swiping to go back from the `ResultDetailView` to `AllResultsView`.
     - Future Considerations would be to add an interactive cards for the upcoming tickets that you could swipe back and forth (like a carousel) similarly to the tinder or netflix cards.
+    
+--------------- 
+#### Tasks yet to be completed
 9. **Local Storage**: Cache the lottery draws locally and allow the app to display the cached data when offline.
+    - `NSCache`
+    - consider lifetime of data
+    - make sure to fallback to cache at the right time and to keep it up 
 10. **UI/UX Enhancements**: Enhance the visual presentation and user experience of the app using animations or custom UI components.
 
 
 ## App Architecture
 
-I thought about what architecture would be suitable here and I ended up going with the "keep it simple" approach. Since there are only 3 screens that get shown to the user. I thought it wouldn't be right to over engineer the architecture. If more complex behaviour would be needed or if we were going to extrapolate the tech test into a more comprehensive app, I would at that point consider fitting in a coordinator pattern or even the TCA pattern.
+more than 1 solution...
+I thought about what architecture would be suitable here and I ended up going with the "keep it simple" approach. Since there are only 3 screens that get shown to the user. I thought it wouldn't be right to over engineer the architecture. If more complex behaviour would be needed or if we were going to extrapolate the tech test into a more comprehensive app, I would at that point consider changing the architecture to be a coordinator pattern or even the TCA pattern.
 
 ```mermaid
 graph LR

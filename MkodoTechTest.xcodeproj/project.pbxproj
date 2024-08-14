@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B906A6882C6A9F94006ED5AB /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6872C6A9F94006ED5AB /* Draw.swift */; };
 		B906A68B2C6A9FF0006ED5AB /* ResultViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A68A2C6A9FF0006ED5AB /* ResultViewModelTests.swift */; };
-		B906A68E2C6AA020006ED5AB /* DateFormatterExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A68D2C6AA020006ED5AB /* DateFormatterExtensionsTests.swift */; };
 		B906A6912C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6902C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift */; };
 		B906A6932C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6922C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift */; };
 		B906A6952C6AA66F006ED5AB /* FaultyJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = B906A6942C6AA66F006ED5AB /* FaultyJSON.json */; };
@@ -32,6 +31,11 @@
 		B906A6BE2C6B8A6A006ED5AB /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6BD2C6B8A6A006ED5AB /* Ticket.swift */; };
 		B906A6C02C6B8AAF006ED5AB /* MyTicketsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6BF2C6B8AAF006ED5AB /* MyTicketsApiService.swift */; };
 		B906A6C22C6B8B05006ED5AB /* StubDataMyTicketsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6C12C6B8B04006ED5AB /* StubDataMyTicketsApiService.swift */; };
+		B90E288B2C6CB20F008E2053 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B90E288A2C6CB20F008E2053 /* Localizable.xcstrings */; };
+		B90E288D2C6CD397008E2053 /* BallState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E288C2C6CD397008E2053 /* BallState.swift */; };
+		B90E288F2C6CD7EF008E2053 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E288E2C6CD7EF008E2053 /* Date+Extensions.swift */; };
+		B90E28912C6CDEA9008E2053 /* ResultsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E28902C6CDEA9008E2053 /* ResultsViewModelFactory.swift */; };
+		B90E28932C6CDF38008E2053 /* MyTicketsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E28922C6CDF38008E2053 /* MyTicketsViewModelFactory.swift */; };
 		B912B46A2C6B90E900823E6E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4692C6B90E900823E6E /* MainViewModel.swift */; };
 		B912B46C2C6BA31800823E6E /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B46B2C6BA31800823E6E /* MainViewModelTests.swift */; };
 		B912B46E2C6BA33900823E6E /* BallViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B46D2C6BA33900823E6E /* BallViewModelTests.swift */; };
@@ -41,8 +45,7 @@
 		B912B4762C6BB11200823E6E /* Ticket+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4752C6BB11200823E6E /* Ticket+Extensions.swift */; };
 		B912B4782C6BB48300823E6E /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4772C6BB48300823E6E /* Matches.swift */; };
 		B912B47B2C6BB4BB00823E6E /* MatchesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B47A2C6BB4BB00823E6E /* MatchesTests.swift */; };
-		B912B47D2C6BB57800823E6E /* Ticket+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B47C2C6BB57800823E6E /* Ticket+Extensions.swift */; };
-		B912B47F2C6BB58D00823E6E /* Draw+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B47E2C6BB58D00823E6E /* Draw+Extensions.swift */; };
+		B912B47F2C6BB58D00823E6E /* OutcomeViewModelConvertibleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B47E2C6BB58D00823E6E /* OutcomeViewModelConvertibleExtension.swift */; };
 		B912B4812C6BB5D800823E6E /* TicketExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4802C6BB5D800823E6E /* TicketExtensionTests.swift */; };
 		B9FE57412C6A4D0100F61A78 /* MkodoTechTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57402C6A4D0100F61A78 /* MkodoTechTestApp.swift */; };
 		B9FE57432C6A4D0100F61A78 /* AllResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57422C6A4D0100F61A78 /* AllResultsView.swift */; };
@@ -58,7 +61,6 @@
 		B9FE577B2C6A58E600F61A78 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE577A2C6A58E600F61A78 /* ResultView.swift */; };
 		B9FE577D2C6A595000F61A78 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE577C2C6A595000F61A78 /* ResultViewModel.swift */; };
 		B9FE57802C6A5C2100F61A78 /* DateViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE577F2C6A5C2100F61A78 /* DateViewModifier.swift */; };
-		B9FE57832C6A9A4E00F61A78 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57822C6A9A4E00F61A78 /* DateFormatter+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +76,6 @@
 /* Begin PBXFileReference section */
 		B906A6872C6A9F94006ED5AB /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
 		B906A68A2C6A9FF0006ED5AB /* ResultViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModelTests.swift; sourceTree = "<group>"; };
-		B906A68D2C6AA020006ED5AB /* DateFormatterExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtensionsTests.swift; sourceTree = "<group>"; };
 		B906A6902C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataLottoResultsApiServiceTests.swift; sourceTree = "<group>"; };
 		B906A6922C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoResultsApiServiceSpy.swift; sourceTree = "<group>"; };
 		B906A6942C6AA66F006ED5AB /* FaultyJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FaultyJSON.json; sourceTree = "<group>"; };
@@ -97,6 +98,11 @@
 		B906A6BD2C6B8A6A006ED5AB /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		B906A6BF2C6B8AAF006ED5AB /* MyTicketsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsApiService.swift; sourceTree = "<group>"; };
 		B906A6C12C6B8B04006ED5AB /* StubDataMyTicketsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataMyTicketsApiService.swift; sourceTree = "<group>"; };
+		B90E288A2C6CB20F008E2053 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		B90E288C2C6CD397008E2053 /* BallState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallState.swift; sourceTree = "<group>"; };
+		B90E288E2C6CD7EF008E2053 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		B90E28902C6CDEA9008E2053 /* ResultsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModelFactory.swift; sourceTree = "<group>"; };
+		B90E28922C6CDF38008E2053 /* MyTicketsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewModelFactory.swift; sourceTree = "<group>"; };
 		B912B4692C6B90E900823E6E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B912B46B2C6BA31800823E6E /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		B912B46D2C6BA33900823E6E /* BallViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallViewModelTests.swift; sourceTree = "<group>"; };
@@ -106,8 +112,7 @@
 		B912B4752C6BB11200823E6E /* Ticket+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+Extensions.swift"; sourceTree = "<group>"; };
 		B912B4772C6BB48300823E6E /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
 		B912B47A2C6BB4BB00823E6E /* MatchesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTests.swift; sourceTree = "<group>"; };
-		B912B47C2C6BB57800823E6E /* Ticket+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+Extensions.swift"; sourceTree = "<group>"; };
-		B912B47E2C6BB58D00823E6E /* Draw+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Draw+Extensions.swift"; sourceTree = "<group>"; };
+		B912B47E2C6BB58D00823E6E /* OutcomeViewModelConvertibleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeViewModelConvertibleExtension.swift; sourceTree = "<group>"; };
 		B912B4802C6BB5D800823E6E /* TicketExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketExtensionTests.swift; sourceTree = "<group>"; };
 		B9FE573D2C6A4D0100F61A78 /* MkodoTechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MkodoTechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FE57402C6A4D0100F61A78 /* MkodoTechTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MkodoTechTestApp.swift; sourceTree = "<group>"; };
@@ -125,7 +130,6 @@
 		B9FE577A2C6A58E600F61A78 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		B9FE577C2C6A595000F61A78 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		B9FE577F2C6A5C2100F61A78 /* DateViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModifier.swift; sourceTree = "<group>"; };
-		B9FE57822C6A9A4E00F61A78 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,11 +166,11 @@
 		B906A68C2C6AA006006ED5AB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B906A68D2C6AA020006ED5AB /* DateFormatterExtensionsTests.swift */,
 				B906A6A92C6B6A08006ED5AB /* Draw+Extensions.swift */,
 				B906A6AB2C6B6D71006ED5AB /* DrawExtensionsTests.swift */,
 				B912B4752C6BB11200823E6E /* Ticket+Extensions.swift */,
 				B912B4802C6BB5D800823E6E /* TicketExtensionTests.swift */,
+				B90E288E2C6CD7EF008E2053 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				B906A6B62C6B872A006ED5AB /* MyTicketsViewModel.swift */,
+				B90E28922C6CDF38008E2053 /* MyTicketsViewModelFactory.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				B906A6BA2C6B8968006ED5AB /* StubData */,
 				B9FE57442C6A4D0500F61A78 /* Assets.xcassets */,
 				B9FE57462C6A4D0500F61A78 /* Preview Content */,
+				B90E288A2C6CB20F008E2053 /* Localizable.xcstrings */,
 			);
 			path = MkodoTechTest;
 			sourceTree = "<group>";
@@ -312,11 +318,12 @@
 		B9FE576C2C6A4E5C00F61A78 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B912B4772C6BB48300823E6E /* Matches.swift */,
 				B9FE576D2C6A4E6F00F61A78 /* Draws.swift */,
 				B906A6872C6A9F94006ED5AB /* Draw.swift */,
 				B906A6BB2C6B8A17006ED5AB /* Tickets.swift */,
 				B906A6BD2C6B8A6A006ED5AB /* Ticket.swift */,
+				B912B4772C6BB48300823E6E /* Matches.swift */,
+				B90E288C2C6CD397008E2053 /* BallState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -345,9 +352,7 @@
 		B9FE57812C6A9A2D00F61A78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B9FE57822C6A9A4E00F61A78 /* DateFormatter+Extensions.swift */,
-				B912B47E2C6BB58D00823E6E /* Draw+Extensions.swift */,
-				B912B47C2C6BB57800823E6E /* Ticket+Extensions.swift */,
+				B912B47E2C6BB58D00823E6E /* OutcomeViewModelConvertibleExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				B9FE576A2C6A4E3200F61A78 /* AllResultsViewModel.swift */,
 				B9FE577C2C6A595000F61A78 /* ResultViewModel.swift */,
 				B906A69B2C6B4FF1006ED5AB /* ResultDetailViewModel.swift */,
+				B90E28902C6CDEA9008E2053 /* ResultsViewModelFactory.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -456,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9FE57482C6A4D0500F61A78 /* Preview Assets.xcassets in Resources */,
+				B90E288B2C6CB20F008E2053 /* Localizable.xcstrings in Resources */,
 				B9FE57452C6A4D0500F61A78 /* Assets.xcassets in Resources */,
 				B906A6B92C6B88A7006ED5AB /* StubMyTicketsData.json in Resources */,
 				B9FE57732C6A531500F61A78 /* StubLottoResultsData.json in Resources */,
@@ -480,7 +487,8 @@
 			files = (
 				B906A6BC2C6B8A17006ED5AB /* Tickets.swift in Sources */,
 				B912B4782C6BB48300823E6E /* Matches.swift in Sources */,
-				B912B47D2C6BB57800823E6E /* Ticket+Extensions.swift in Sources */,
+				B90E28932C6CDF38008E2053 /* MyTicketsViewModelFactory.swift in Sources */,
+				B90E288D2C6CD397008E2053 /* BallState.swift in Sources */,
 				B906A69E2C6B513D006ED5AB /* OutcomeView.swift in Sources */,
 				B906A6B42C6B8718006ED5AB /* MyTicketsView.swift in Sources */,
 				B9FE576B2C6A4E3200F61A78 /* AllResultsViewModel.swift in Sources */,
@@ -502,11 +510,11 @@
 				B906A69C2C6B4FF1006ED5AB /* ResultDetailViewModel.swift in Sources */,
 				B9FE57772C6A576600F61A78 /* ApiServiceError.swift in Sources */,
 				B906A6BE2C6B8A6A006ED5AB /* Ticket.swift in Sources */,
-				B9FE57832C6A9A4E00F61A78 /* DateFormatter+Extensions.swift in Sources */,
 				B906A6A22C6B555B006ED5AB /* PrizeTitleViewModifier.swift in Sources */,
 				B9FE576E2C6A4E6F00F61A78 /* Draws.swift in Sources */,
-				B912B47F2C6BB58D00823E6E /* Draw+Extensions.swift in Sources */,
+				B912B47F2C6BB58D00823E6E /* OutcomeViewModelConvertibleExtension.swift in Sources */,
 				B906A6A62C6B5E53006ED5AB /* BallViewModel.swift in Sources */,
+				B90E28912C6CDEA9008E2053 /* ResultsViewModelFactory.swift in Sources */,
 				B906A6C02C6B8AAF006ED5AB /* MyTicketsApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,7 +524,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B912B47B2C6BB4BB00823E6E /* MatchesTests.swift in Sources */,
-				B906A68E2C6AA020006ED5AB /* DateFormatterExtensionsTests.swift in Sources */,
 				B9FE57522C6A4D0500F61A78 /* AllResultsViewModelTests.swift in Sources */,
 				B906A6A82C6B69D8006ED5AB /* ResultDetailViewModelTests.swift in Sources */,
 				B906A6AA2C6B6A08006ED5AB /* Draw+Extensions.swift in Sources */,
@@ -525,6 +532,7 @@
 				B906A6AC2C6B6D71006ED5AB /* DrawExtensionsTests.swift in Sources */,
 				B912B4702C6BA35800823E6E /* MyTicketsViewModelTests.swift in Sources */,
 				B912B4812C6BB5D800823E6E /* TicketExtensionTests.swift in Sources */,
+				B90E288F2C6CD7EF008E2053 /* Date+Extensions.swift in Sources */,
 				B912B46C2C6BA31800823E6E /* MainViewModelTests.swift in Sources */,
 				B912B4762C6BB11200823E6E /* Ticket+Extensions.swift in Sources */,
 				B906A6912C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift in Sources */,

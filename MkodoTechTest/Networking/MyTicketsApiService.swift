@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol MyTicketsApiService: AnyObject {
+protocol MyTicketsApiService {
     func getMyTickets() async throws -> Tickets
 }

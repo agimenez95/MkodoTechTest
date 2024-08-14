@@ -12,7 +12,7 @@ extension Draw {
 
     static func makeStub() -> Draw {
         Draw(id: "draw-1",
-             drawDate: Date(timeIntervalSince1970: 1723540000),
+             drawDate: Date.makeStub,
              number1: "2",
              number2: "2",
              number3: "23",

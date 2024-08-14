@@ -5,31 +5,37 @@
 //  Created by Adriano Gimenez on 13/08/2024.
 //
 
-import Foundation
+import SwiftUI
 import Observation
 
 @Observable
 final class ResultDetailViewModel {
 
-    var prizeAmount: String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.locale = .init(identifier: "en_GB")
-        let price = (Double(draw.topPrize) / 100.0) as NSNumber
-        return formatter.string(from: price) ?? ""
+    var prizeAmount: Double {
+        Double(draw.topPrize) / Constant.oneHundred
     }
 
     var outcomeViewModel: OutcomeViewModel {
         draw.makeOutcomeViewModel()
     }
 
-    var dateText: String {
-        DateFormatter().makeFormattedDateString(from: draw.drawDate) ?? ""
+    var date: Date {
+        draw.drawDate
     }
+
+    var currencyCode = Constant.gbpCurrencyCode
 
     private var draw: Draw
 
     init(draw: Draw) {
         self.draw = draw
+    }
+}
+
+private extension ResultDetailViewModel {
+
+    enum Constant {
+        static let gbpCurrencyCode = "GBP"
+        static let oneHundred = 100.0
     }
 }

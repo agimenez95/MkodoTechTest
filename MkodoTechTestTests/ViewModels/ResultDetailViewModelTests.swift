@@ -11,29 +11,22 @@ import XCTest
 final class ResultDetailViewModelTests: XCTestCase {
 
     func testResultDetailViewModel() {
-        let sut = ResultDetailViewModel(draw: .makeStub())
+        let sut = ResultsViewModelFactory.makeResultDetailViewModel(for: .makeStub())
         XCTAssertNotNil(sut)
     }
 
-    func testResultDetailViewModel_dateText() {
-        let sut = ResultDetailViewModel(draw: .makeStub())
-        XCTAssertEqual(sut.dateText, "13/08/2024")
-    }
-
-    func testResultDetailViewModel_dateText_fromNilDate() {
-        var stubDraw = Draw.makeStub()
-        stubDraw.drawDate = nil
-        let sut = ResultDetailViewModel(draw: stubDraw)
-        XCTAssertEqual(sut.dateText, "")
+    func testResultDetailViewModel_date() {
+        let sut = ResultsViewModelFactory.makeResultDetailViewModel(for: .makeStub())
+        XCTAssertEqual(sut.date, Date.makeStub)
     }
 
     func testResultDetailViewModel_outcomeViewModel() {
-        let sut = ResultDetailViewModel(draw: .makeStub())
+        let sut = ResultsViewModelFactory.makeResultDetailViewModel(for: .makeStub())
         XCTAssertTrue((sut.outcomeViewModel as Any) is OutcomeViewModel)
     }
 
     func testResultDetailViewModel_prizeAmount() {
-        let sut = ResultDetailViewModel(draw: .makeStub())
-        XCTAssertEqual(sut.prizeAmount, "£1,000.00")
+        let sut = ResultsViewModelFactory.makeResultDetailViewModel(for: .makeStub())
+        XCTAssertEqual(sut.prizeAmount, 1000)
     }
 }

@@ -13,10 +13,10 @@ struct ResultDetailView: View {
 
     var body: some View {
         VStack {
-            Text(viewModel.prizeAmount)
+            Text(viewModel.prizeAmount, format: .currency(code: viewModel.currencyCode))
                 .prizeTitleStyle()
                 .padding()
-            Text(viewModel.dateText)
+            Text(viewModel.date, style: .date)
                 .dateStyle()
 
             Spacer()
@@ -39,5 +39,5 @@ struct ResultDetailView: View {
                                                                  number5: "5",
                                                                  number6: "6",
                                                                  bonusBall: "10",
-                                                                 topPrize: 100000)))
+                                                                 topPrize: 100_000)))
 }

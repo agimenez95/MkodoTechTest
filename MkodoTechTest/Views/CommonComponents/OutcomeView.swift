@@ -12,7 +12,7 @@ struct OutcomeView: View {
     @State var viewModel: OutcomeViewModel
 
     var body: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: Constant.spacing) {
             BallView(viewModel: BallViewModel(ballState: .normal(matches: viewModel.matchesNumber1),
                                               number: viewModel.number1))
             BallView(viewModel: BallViewModel(ballState: .normal(matches: viewModel.matchesNumber2),
@@ -34,11 +34,11 @@ struct OutcomeView: View {
 private extension OutcomeView {
 
     enum Constant {
-        static let accessibilityPrefix = "ball."
+        static let spacing: CGFloat = 8
     }
 }
 
-#Preview {
+#Preview("not drawn") {
     OutcomeView(viewModel: OutcomeViewModel(number1: "1",
                                             number2: "2",
                                             number3: "3",
@@ -46,4 +46,37 @@ private extension OutcomeView {
                                             number5: "5",
                                             number6: "6",
                                             bonusBall: "10"))
+}
+#Preview("all mismatch") {
+    OutcomeView(viewModel: OutcomeViewModel(number1: "1",
+                                            number2: "2",
+                                            number3: "3",
+                                            number4: "4",
+                                            number5: "5",
+                                            number6: "6",
+                                            bonusBall: "10",
+                                            matchesNumber1: .no,
+                                            matchesNumber2: .no,
+                                            matchesNumber3: .no,
+                                            matchesNumber4: .no,
+                                            matchesNumber5: .no,
+                                            matchesNumber6: .no,
+                                            matchesBonusBall: .no))
+}
+
+#Preview("all match") {
+    OutcomeView(viewModel: OutcomeViewModel(number1: "1",
+                                            number2: "2",
+                                            number3: "3",
+                                            number4: "4",
+                                            number5: "5",
+                                            number6: "6",
+                                            bonusBall: "10",
+                                            matchesNumber1: .yes,
+                                            matchesNumber2: .yes,
+                                            matchesNumber3: .yes,
+                                            matchesNumber4: .yes,
+                                            matchesNumber5: .yes,
+                                            matchesNumber6: .yes,
+                                            matchesBonusBall: .yes))
 }

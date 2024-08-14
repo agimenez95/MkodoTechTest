@@ -15,7 +15,7 @@ final class MainViewModelTests: XCTestCase {
         XCTAssertNotNil(sut)
     }
 
-    func testMainViewModel_getResults_lottoResults() async throws {
+    func testMainViewModel_getResults_lottoResults() async {
         let apiService = StubDataLottoResultsApiService()
         let sut = MainViewModel(apiService: apiService)
         await sut.getResults()
@@ -31,4 +31,18 @@ final class MainViewModelTests: XCTestCase {
         XCTAssertTrue(apiServiceSpy.didCallGetLottoResults)
     }
 
+    func testMainViewModel_getResults_withInvalidDate_throwsError() async {
+        let apiService = StubDataLottoResultsApiService(bundle: Bundle(for: type(of: self)),
+                                                        fileName: Constant.invalidDatesJSONFileName)
+        let sut = AllResultsViewModel(lottoResultsApiService: apiService)
+        await sut.getData()
+        XCTAssertEqual(sut.error, .decodingError)
+    }
+}
+
+private extension MainViewModelTests {
+
+    enum Constant {
+        static let invalidDatesJSONFileName = "InvalidDates"
+    }
 }

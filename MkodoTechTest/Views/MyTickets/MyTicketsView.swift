@@ -10,26 +10,37 @@ import SwiftUI
 struct MyTicketsView: View {
     
     @State var viewModel: MyTicketsViewModel
-    
+
     var body: some View {
         NavigationStack {
             Form {
-                ForEach(viewModel.sections, id: \.self) { sectionName in
-                    Section("\(sectionName)") {
-                        ForEach(viewModel.tickets(in: sectionName), id: \.id) { ticket in
+                ForEach(viewModel.sections, id: \.self) { sectionType in
+                    Section {
+                        ForEach(viewModel.tickets(in: sectionType)) { ticket in
                             OutcomeView(viewModel: viewModel.makeOutcomeViewModel(for: ticket))
                         }
+                    } header: {
+                        makeSectionTitle(for: sectionType)
                     }
                 }
             }
-            .navigationTitle("My Tickets")
+            .navigationTitle(viewModel.navigationTitle)
         }
         .task {
-            do {
-                try await viewModel.getTickets()
-            } catch {
-                print(error)
-            }
+            await viewModel.getTickets()
+        }
+        .alert(isPresented: $viewModel.isErrorPresented) {
+            Alert(title: Text(viewModel.error?.description ?? "Error"))
+        }
+    }
+}
+
+private extension MyTicketsView {
+
+    func makeSectionTitle(for sectionType: DateSection) -> Text {
+        switch sectionType {
+        case .upcoming: Text(viewModel.upcomingSectionTitle)
+        case .date(let date): Text(date, style: .date)
         }
     }
 }
@@ -37,12 +48,12 @@ struct MyTicketsView: View {
 #Preview {
     MyTicketsView(viewModel: .init(draws: [.init(id: "draw-1",
                                                  drawDate: .now,
-                                                 number1: "1",
+                                                 number1: "2",
                                                  number2: "2",
-                                                 number3: "3",
+                                                 number3: "5",
                                                  number4: "4",
-                                                 number5: "5",
+                                                 number5: "47",
                                                  number6: "6",
-                                                 bonusBall: "10",
+                                                 bonusBall: "1",
                                                  topPrize: 10_000)]))
 }
