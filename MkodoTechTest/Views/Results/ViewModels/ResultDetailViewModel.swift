@@ -16,7 +16,9 @@ final class ResultDetailViewModel {
     }
 
     var outcomeViewModel: OutcomeViewModel {
-        draw.makeOutcomeViewModel()
+        let viewModel = draw.makeOutcomeViewModel()
+        viewModel.shouldAnimate = true
+        return viewModel
     }
 
     var date: Date {

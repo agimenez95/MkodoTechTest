@@ -36,6 +36,7 @@
 		B90E288F2C6CD7EF008E2053 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E288E2C6CD7EF008E2053 /* Date+Extensions.swift */; };
 		B90E28912C6CDEA9008E2053 /* ResultsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E28902C6CDEA9008E2053 /* ResultsViewModelFactory.swift */; };
 		B90E28932C6CDF38008E2053 /* MyTicketsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E28922C6CDF38008E2053 /* MyTicketsViewModelFactory.swift */; };
+		B90E28952C6CEF88008E2053 /* AnimatingBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E28942C6CEF88008E2053 /* AnimatingBall.swift */; };
 		B912B46A2C6B90E900823E6E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4692C6B90E900823E6E /* MainViewModel.swift */; };
 		B912B46C2C6BA31800823E6E /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B46B2C6BA31800823E6E /* MainViewModelTests.swift */; };
 		B912B46E2C6BA33900823E6E /* BallViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B46D2C6BA33900823E6E /* BallViewModelTests.swift */; };
@@ -103,6 +104,7 @@
 		B90E288E2C6CD7EF008E2053 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		B90E28902C6CDEA9008E2053 /* ResultsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModelFactory.swift; sourceTree = "<group>"; };
 		B90E28922C6CDF38008E2053 /* MyTicketsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewModelFactory.swift; sourceTree = "<group>"; };
+		B90E28942C6CEF88008E2053 /* AnimatingBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingBall.swift; sourceTree = "<group>"; };
 		B912B4692C6B90E900823E6E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B912B46B2C6BA31800823E6E /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		B912B46D2C6BA33900823E6E /* BallViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallViewModelTests.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				B906A6BD2C6B8A6A006ED5AB /* Ticket.swift */,
 				B912B4772C6BB48300823E6E /* Matches.swift */,
 				B90E288C2C6CD397008E2053 /* BallState.swift */,
+				B90E28942C6CEF88008E2053 /* AnimatingBall.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B906A6BC2C6B8A17006ED5AB /* Tickets.swift in Sources */,
+				B90E28952C6CEF88008E2053 /* AnimatingBall.swift in Sources */,
 				B912B4782C6BB48300823E6E /* Matches.swift in Sources */,
 				B90E28932C6CDF38008E2053 /* MyTicketsViewModelFactory.swift in Sources */,
 				B90E288D2C6CD397008E2053 /* BallState.swift in Sources */,

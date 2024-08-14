@@ -5,8 +5,8 @@
 //  Created by Adriano Gimenez on 13/08/2024.
 //
 
-import Foundation
 import Observation
+import SwiftUI
 
 @Observable
 final class OutcomeViewModel {
@@ -27,7 +27,9 @@ final class OutcomeViewModel {
     var matchesNumber6: Matches
     var matchesBonusBall: Matches
 
-    init(number1: String, 
+    var shouldAnimate: Bool
+
+    init(number1: String,
          number2: String,
          number3: String,
          number4: String,
@@ -40,7 +42,8 @@ final class OutcomeViewModel {
          matchesNumber4: Matches = .notDrawn,
          matchesNumber5: Matches = .notDrawn,
          matchesNumber6: Matches = .notDrawn,
-         matchesBonusBall: Matches = .notDrawn) {
+         matchesBonusBall: Matches = .notDrawn,
+         shouldAnimate: Bool = false) {
         self.number1 = number1
         self.number2 = number2
         self.number3 = number3
@@ -55,5 +58,7 @@ final class OutcomeViewModel {
         self.matchesNumber5 = matchesNumber5
         self.matchesNumber6 = matchesNumber6
         self.matchesBonusBall = matchesBonusBall
+        self.shouldAnimate = shouldAnimate
     }
+
 }
