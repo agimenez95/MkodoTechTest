@@ -21,13 +21,7 @@ From the outset I have a few things in mind:
     - 
 I thought about what architecture would be suitable here and I ended up going with the "keep it simple" approach. Since there are only three screens that get shown to the user. I thought it wouldn't be right to over engineer the architecture. If more complex behaviour were needed or if we were going to extrapolate the tech test into a more comprehensive app, I would at that point consider changing the architecture to be a coordinator pattern or even the TCA pattern.
 
-```mermaid
-graph LR
-A[MkodoTechTestApp] --> B[MainView] --> C[TabView]
-C --> D[AllResultsView] --> F[ResultView]
-C --> E[MyTicketsView]
-
-```
+![image info](./images/architecture.jpeg)
 
 ### Essential tasks
 1. **Parse JSON Data**: Load and parse the provided JSON data within the app
