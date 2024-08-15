@@ -9,9 +9,9 @@ import Foundation
 
 struct ResultsViewModelFactory {
     
-    static func makeAllResultsViewModel(results: [Draw] = [],
-                                        apiService: LottoResultsApiService = StubDataLottoResultsApiService()) -> AllResultsViewModel {
-        AllResultsViewModel(lottoResults: results, lottoResultsApiService: apiService)
+    static func makeAllResultsViewModel(draws: [Draw] = [],
+                                        apiService: DrawsApiServiceUseCase = DrawsApiService()) -> AllResultsViewModel {
+        AllResultsViewModel(draws: draws, drawsApiService: apiService)
     }
 
     static func makeResultViewModel(for draw: Draw) -> ResultViewModel {

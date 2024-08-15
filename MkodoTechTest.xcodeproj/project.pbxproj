@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		B906A6882C6A9F94006ED5AB /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6872C6A9F94006ED5AB /* Draw.swift */; };
 		B906A68B2C6A9FF0006ED5AB /* ResultViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A68A2C6A9FF0006ED5AB /* ResultViewModelTests.swift */; };
-		B906A6912C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6902C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift */; };
-		B906A6932C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6922C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift */; };
+		B906A6932C6AA0B3006ED5AB /* DrawsApiServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6922C6AA0B3006ED5AB /* DrawsApiServiceSpy.swift */; };
 		B906A6952C6AA66F006ED5AB /* FaultyJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = B906A6942C6AA66F006ED5AB /* FaultyJSON.json */; };
 		B906A6982C6B4ADC006ED5AB /* InvalidDates.json in Resources */ = {isa = PBXBuildFile; fileRef = B906A6972C6B4ADC006ED5AB /* InvalidDates.json */; };
 		B906A69A2C6B4FE3006ED5AB /* ResultDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6992C6B4FE3006ED5AB /* ResultDetailView.swift */; };
@@ -26,11 +25,9 @@
 		B906A6AE2C6B8687006ED5AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6AD2C6B8687006ED5AB /* MainView.swift */; };
 		B906A6B42C6B8718006ED5AB /* MyTicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6B32C6B8718006ED5AB /* MyTicketsView.swift */; };
 		B906A6B72C6B872A006ED5AB /* MyTicketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6B62C6B872A006ED5AB /* MyTicketsViewModel.swift */; };
-		B906A6B92C6B88A7006ED5AB /* StubMyTicketsData.json in Resources */ = {isa = PBXBuildFile; fileRef = B906A6B82C6B88A7006ED5AB /* StubMyTicketsData.json */; };
 		B906A6BC2C6B8A17006ED5AB /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6BB2C6B8A17006ED5AB /* Tickets.swift */; };
 		B906A6BE2C6B8A6A006ED5AB /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6BD2C6B8A6A006ED5AB /* Ticket.swift */; };
-		B906A6C02C6B8AAF006ED5AB /* MyTicketsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6BF2C6B8AAF006ED5AB /* MyTicketsApiService.swift */; };
-		B906A6C22C6B8B05006ED5AB /* StubDataMyTicketsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6C12C6B8B04006ED5AB /* StubDataMyTicketsApiService.swift */; };
+		B906A6C02C6B8AAF006ED5AB /* MyTicketsApiServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906A6BF2C6B8AAF006ED5AB /* MyTicketsApiServiceUseCase.swift */; };
 		B90E288B2C6CB20F008E2053 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B90E288A2C6CB20F008E2053 /* Localizable.xcstrings */; };
 		B90E288D2C6CD397008E2053 /* BallState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E288C2C6CD397008E2053 /* BallState.swift */; };
 		B90E288F2C6CD7EF008E2053 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E288E2C6CD7EF008E2053 /* Date+Extensions.swift */; };
@@ -41,13 +38,23 @@
 		B912B46C2C6BA31800823E6E /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B46B2C6BA31800823E6E /* MainViewModelTests.swift */; };
 		B912B46E2C6BA33900823E6E /* BallViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B46D2C6BA33900823E6E /* BallViewModelTests.swift */; };
 		B912B4702C6BA35800823E6E /* MyTicketsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B46F2C6BA35800823E6E /* MyTicketsViewModelTests.swift */; };
-		B912B4722C6BA37800823E6E /* StubDataMyTicketsApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4712C6BA37800823E6E /* StubDataMyTicketsApiServiceTests.swift */; };
 		B912B4742C6BAC7600823E6E /* MyTicketsApiServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4732C6BAC7600823E6E /* MyTicketsApiServiceSpy.swift */; };
 		B912B4762C6BB11200823E6E /* Ticket+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4752C6BB11200823E6E /* Ticket+Extensions.swift */; };
 		B912B4782C6BB48300823E6E /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4772C6BB48300823E6E /* Matches.swift */; };
 		B912B47B2C6BB4BB00823E6E /* MatchesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B47A2C6BB4BB00823E6E /* MatchesTests.swift */; };
 		B912B47F2C6BB58D00823E6E /* OutcomeViewModelConvertibleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B47E2C6BB58D00823E6E /* OutcomeViewModelConvertibleExtension.swift */; };
 		B912B4812C6BB5D800823E6E /* TicketExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B912B4802C6BB5D800823E6E /* TicketExtensionTests.swift */; };
+		B9CE56A02C6D4E4700AC017C /* DrawsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CE569F2C6D4E4700AC017C /* DrawsApiService.swift */; };
+		B9CE56A22C6D4FD200AC017C /* MyTicketsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CE56A12C6D4FD200AC017C /* MyTicketsApiService.swift */; };
+		B9CE56A42C6DEB6D00AC017C /* DataCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CE56A32C6DEB6D00AC017C /* DataCacher.swift */; };
+		B9CE56A62C6DEE0500AC017C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CE56A52C6DEE0500AC017C /* Endpoint.swift */; };
+		B9CE56A82C6DF84200AC017C /* StubMyTicketsData.json in Resources */ = {isa = PBXBuildFile; fileRef = B9CE56A72C6DF84200AC017C /* StubMyTicketsData.json */; };
+		B9CE56AA2C6DF85200AC017C /* StubLottoResultsData.json in Resources */ = {isa = PBXBuildFile; fileRef = B9CE56A92C6DF85200AC017C /* StubLottoResultsData.json */; };
+		B9CE56AC2C6DF88900AC017C /* StubDataMyTicketsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CE56AB2C6DF88900AC017C /* StubDataMyTicketsApiService.swift */; };
+		B9CE56B02C6DF96700AC017C /* StubDrawsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CE56AF2C6DF96700AC017C /* StubDrawsApiService.swift */; };
+		B9CE56B22C6DFAF500AC017C /* MyTicketsApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CE56B12C6DFAF500AC017C /* MyTicketsApiServiceTests.swift */; };
+		B9CE56B62C6E0A6100AC017C /* DataCacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CE56B52C6E0A6100AC017C /* DataCacherTests.swift */; };
+		B9CE56B82C6E0CEB00AC017C /* DrawsApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CE56B72C6E0CEB00AC017C /* DrawsApiServiceTests.swift */; };
 		B9FE57412C6A4D0100F61A78 /* MkodoTechTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57402C6A4D0100F61A78 /* MkodoTechTestApp.swift */; };
 		B9FE57432C6A4D0100F61A78 /* AllResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57422C6A4D0100F61A78 /* AllResultsView.swift */; };
 		B9FE57452C6A4D0500F61A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9FE57442C6A4D0500F61A78 /* Assets.xcassets */; };
@@ -55,9 +62,7 @@
 		B9FE57522C6A4D0500F61A78 /* AllResultsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57512C6A4D0500F61A78 /* AllResultsViewModelTests.swift */; };
 		B9FE576B2C6A4E3200F61A78 /* AllResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE576A2C6A4E3200F61A78 /* AllResultsViewModel.swift */; };
 		B9FE576E2C6A4E6F00F61A78 /* Draws.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE576D2C6A4E6F00F61A78 /* Draws.swift */; };
-		B9FE57712C6A51AF00F61A78 /* LottoResultsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57702C6A51AF00F61A78 /* LottoResultsApiService.swift */; };
-		B9FE57732C6A531500F61A78 /* StubLottoResultsData.json in Resources */ = {isa = PBXBuildFile; fileRef = B9FE57722C6A531500F61A78 /* StubLottoResultsData.json */; };
-		B9FE57752C6A574500F61A78 /* StubDataLottoResultsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57742C6A574500F61A78 /* StubDataLottoResultsApiService.swift */; };
+		B9FE57712C6A51AF00F61A78 /* DrawsApiServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57702C6A51AF00F61A78 /* DrawsApiServiceUseCase.swift */; };
 		B9FE57772C6A576600F61A78 /* ApiServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE57762C6A576600F61A78 /* ApiServiceError.swift */; };
 		B9FE577B2C6A58E600F61A78 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE577A2C6A58E600F61A78 /* ResultView.swift */; };
 		B9FE577D2C6A595000F61A78 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE577C2C6A595000F61A78 /* ResultViewModel.swift */; };
@@ -77,8 +82,7 @@
 /* Begin PBXFileReference section */
 		B906A6872C6A9F94006ED5AB /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
 		B906A68A2C6A9FF0006ED5AB /* ResultViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModelTests.swift; sourceTree = "<group>"; };
-		B906A6902C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataLottoResultsApiServiceTests.swift; sourceTree = "<group>"; };
-		B906A6922C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoResultsApiServiceSpy.swift; sourceTree = "<group>"; };
+		B906A6922C6AA0B3006ED5AB /* DrawsApiServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawsApiServiceSpy.swift; sourceTree = "<group>"; };
 		B906A6942C6AA66F006ED5AB /* FaultyJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FaultyJSON.json; sourceTree = "<group>"; };
 		B906A6972C6B4ADC006ED5AB /* InvalidDates.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InvalidDates.json; sourceTree = "<group>"; };
 		B906A6992C6B4FE3006ED5AB /* ResultDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailView.swift; sourceTree = "<group>"; };
@@ -94,11 +98,9 @@
 		B906A6AD2C6B8687006ED5AB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B906A6B32C6B8718006ED5AB /* MyTicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsView.swift; sourceTree = "<group>"; };
 		B906A6B62C6B872A006ED5AB /* MyTicketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewModel.swift; sourceTree = "<group>"; };
-		B906A6B82C6B88A7006ED5AB /* StubMyTicketsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StubMyTicketsData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		B906A6BB2C6B8A17006ED5AB /* Tickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets.swift; sourceTree = "<group>"; };
 		B906A6BD2C6B8A6A006ED5AB /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
-		B906A6BF2C6B8AAF006ED5AB /* MyTicketsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsApiService.swift; sourceTree = "<group>"; };
-		B906A6C12C6B8B04006ED5AB /* StubDataMyTicketsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataMyTicketsApiService.swift; sourceTree = "<group>"; };
+		B906A6BF2C6B8AAF006ED5AB /* MyTicketsApiServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsApiServiceUseCase.swift; sourceTree = "<group>"; };
 		B90E288A2C6CB20F008E2053 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B90E288C2C6CD397008E2053 /* BallState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallState.swift; sourceTree = "<group>"; };
 		B90E288E2C6CD7EF008E2053 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -109,13 +111,23 @@
 		B912B46B2C6BA31800823E6E /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		B912B46D2C6BA33900823E6E /* BallViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallViewModelTests.swift; sourceTree = "<group>"; };
 		B912B46F2C6BA35800823E6E /* MyTicketsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewModelTests.swift; sourceTree = "<group>"; };
-		B912B4712C6BA37800823E6E /* StubDataMyTicketsApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataMyTicketsApiServiceTests.swift; sourceTree = "<group>"; };
 		B912B4732C6BAC7600823E6E /* MyTicketsApiServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsApiServiceSpy.swift; sourceTree = "<group>"; };
 		B912B4752C6BB11200823E6E /* Ticket+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticket+Extensions.swift"; sourceTree = "<group>"; };
 		B912B4772C6BB48300823E6E /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
 		B912B47A2C6BB4BB00823E6E /* MatchesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTests.swift; sourceTree = "<group>"; };
 		B912B47E2C6BB58D00823E6E /* OutcomeViewModelConvertibleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeViewModelConvertibleExtension.swift; sourceTree = "<group>"; };
 		B912B4802C6BB5D800823E6E /* TicketExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketExtensionTests.swift; sourceTree = "<group>"; };
+		B9CE569F2C6D4E4700AC017C /* DrawsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawsApiService.swift; sourceTree = "<group>"; };
+		B9CE56A12C6D4FD200AC017C /* MyTicketsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsApiService.swift; sourceTree = "<group>"; };
+		B9CE56A32C6DEB6D00AC017C /* DataCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCacher.swift; sourceTree = "<group>"; };
+		B9CE56A52C6DEE0500AC017C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		B9CE56A72C6DF84200AC017C /* StubMyTicketsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StubMyTicketsData.json; sourceTree = "<group>"; };
+		B9CE56A92C6DF85200AC017C /* StubLottoResultsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StubLottoResultsData.json; sourceTree = "<group>"; };
+		B9CE56AB2C6DF88900AC017C /* StubDataMyTicketsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataMyTicketsApiService.swift; sourceTree = "<group>"; };
+		B9CE56AF2C6DF96700AC017C /* StubDrawsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDrawsApiService.swift; sourceTree = "<group>"; };
+		B9CE56B12C6DFAF500AC017C /* MyTicketsApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsApiServiceTests.swift; sourceTree = "<group>"; };
+		B9CE56B52C6E0A6100AC017C /* DataCacherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCacherTests.swift; sourceTree = "<group>"; };
+		B9CE56B72C6E0CEB00AC017C /* DrawsApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawsApiServiceTests.swift; sourceTree = "<group>"; };
 		B9FE573D2C6A4D0100F61A78 /* MkodoTechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MkodoTechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FE57402C6A4D0100F61A78 /* MkodoTechTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MkodoTechTestApp.swift; sourceTree = "<group>"; };
 		B9FE57422C6A4D0100F61A78 /* AllResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsView.swift; sourceTree = "<group>"; };
@@ -125,9 +137,7 @@
 		B9FE57512C6A4D0500F61A78 /* AllResultsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsViewModelTests.swift; sourceTree = "<group>"; };
 		B9FE576A2C6A4E3200F61A78 /* AllResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsViewModel.swift; sourceTree = "<group>"; };
 		B9FE576D2C6A4E6F00F61A78 /* Draws.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draws.swift; sourceTree = "<group>"; };
-		B9FE57702C6A51AF00F61A78 /* LottoResultsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoResultsApiService.swift; sourceTree = "<group>"; };
-		B9FE57722C6A531500F61A78 /* StubLottoResultsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StubLottoResultsData.json; sourceTree = "<group>"; };
-		B9FE57742C6A574500F61A78 /* StubDataLottoResultsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataLottoResultsApiService.swift; sourceTree = "<group>"; };
+		B9FE57702C6A51AF00F61A78 /* DrawsApiServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawsApiServiceUseCase.swift; sourceTree = "<group>"; };
 		B9FE57762C6A576600F61A78 /* ApiServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceError.swift; sourceTree = "<group>"; };
 		B9FE577A2C6A58E600F61A78 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		B9FE577C2C6A595000F61A78 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
@@ -180,10 +190,13 @@
 		B906A68F2C6AA076006ED5AB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				B906A6902C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift */,
-				B906A6922C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift */,
-				B912B4712C6BA37800823E6E /* StubDataMyTicketsApiServiceTests.swift */,
+				B9CE56B12C6DFAF500AC017C /* MyTicketsApiServiceTests.swift */,
+				B9CE56B72C6E0CEB00AC017C /* DrawsApiServiceTests.swift */,
+				B906A6922C6AA0B3006ED5AB /* DrawsApiServiceSpy.swift */,
 				B912B4732C6BAC7600823E6E /* MyTicketsApiServiceSpy.swift */,
+				B9CE56AB2C6DF88900AC017C /* StubDataMyTicketsApiService.swift */,
+				B9CE56AF2C6DF96700AC017C /* StubDrawsApiService.swift */,
+				B9CE56B52C6E0A6100AC017C /* DataCacherTests.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -193,6 +206,8 @@
 			children = (
 				B906A6942C6AA66F006ED5AB /* FaultyJSON.json */,
 				B906A6972C6B4ADC006ED5AB /* InvalidDates.json */,
+				B9CE56A72C6DF84200AC017C /* StubMyTicketsData.json */,
+				B9CE56A92C6DF85200AC017C /* StubLottoResultsData.json */,
 			);
 			path = JSONFiles;
 			sourceTree = "<group>";
@@ -245,21 +260,20 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		B906A6BA2C6B8968006ED5AB /* StubData */ = {
-			isa = PBXGroup;
-			children = (
-				B9FE57722C6A531500F61A78 /* StubLottoResultsData.json */,
-				B906A6B82C6B88A7006ED5AB /* StubMyTicketsData.json */,
-			);
-			path = StubData;
-			sourceTree = "<group>";
-		};
 		B912B4792C6BB4AD00823E6E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				B912B47A2C6BB4BB00823E6E /* MatchesTests.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B9CE568D2C6D0AFB00AC017C /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				B9CE56A32C6DEB6D00AC017C /* DataCacher.swift */,
+			);
+			path = Caching;
 			sourceTree = "<group>";
 		};
 		B9FE57342C6A4D0100F61A78 = {
@@ -289,7 +303,6 @@
 				B9FE577E2C6A5BFF00F61A78 /* ViewModifiers */,
 				B9FE576C2C6A4E5C00F61A78 /* Models */,
 				B9FE576F2C6A519800F61A78 /* Networking */,
-				B906A6BA2C6B8968006ED5AB /* StubData */,
 				B9FE57442C6A4D0500F61A78 /* Assets.xcassets */,
 				B9FE57462C6A4D0500F61A78 /* Preview Content */,
 				B90E288A2C6CB20F008E2053 /* Localizable.xcstrings */,
@@ -334,10 +347,12 @@
 		B9FE576F2C6A519800F61A78 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				B9FE57702C6A51AF00F61A78 /* LottoResultsApiService.swift */,
-				B906A6BF2C6B8AAF006ED5AB /* MyTicketsApiService.swift */,
-				B9FE57742C6A574500F61A78 /* StubDataLottoResultsApiService.swift */,
-				B906A6C12C6B8B04006ED5AB /* StubDataMyTicketsApiService.swift */,
+				B9CE56A52C6DEE0500AC017C /* Endpoint.swift */,
+				B9CE568D2C6D0AFB00AC017C /* Caching */,
+				B9FE57702C6A51AF00F61A78 /* DrawsApiServiceUseCase.swift */,
+				B906A6BF2C6B8AAF006ED5AB /* MyTicketsApiServiceUseCase.swift */,
+				B9CE569F2C6D4E4700AC017C /* DrawsApiService.swift */,
+				B9CE56A12C6D4FD200AC017C /* MyTicketsApiService.swift */,
 				B9FE57762C6A576600F61A78 /* ApiServiceError.swift */,
 			);
 			path = Networking;
@@ -467,8 +482,6 @@
 				B9FE57482C6A4D0500F61A78 /* Preview Assets.xcassets in Resources */,
 				B90E288B2C6CB20F008E2053 /* Localizable.xcstrings in Resources */,
 				B9FE57452C6A4D0500F61A78 /* Assets.xcassets in Resources */,
-				B906A6B92C6B88A7006ED5AB /* StubMyTicketsData.json in Resources */,
-				B9FE57732C6A531500F61A78 /* StubLottoResultsData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +490,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B906A6952C6AA66F006ED5AB /* FaultyJSON.json in Resources */,
+				B9CE56AA2C6DF85200AC017C /* StubLottoResultsData.json in Resources */,
+				B9CE56A82C6DF84200AC017C /* StubMyTicketsData.json in Resources */,
 				B906A6982C6B4ADC006ED5AB /* InvalidDates.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,19 +509,19 @@
 				B90E28932C6CDF38008E2053 /* MyTicketsViewModelFactory.swift in Sources */,
 				B90E288D2C6CD397008E2053 /* BallState.swift in Sources */,
 				B906A69E2C6B513D006ED5AB /* OutcomeView.swift in Sources */,
+				B9CE56A42C6DEB6D00AC017C /* DataCacher.swift in Sources */,
 				B906A6B42C6B8718006ED5AB /* MyTicketsView.swift in Sources */,
 				B9FE576B2C6A4E3200F61A78 /* AllResultsViewModel.swift in Sources */,
 				B9FE577D2C6A595000F61A78 /* ResultViewModel.swift in Sources */,
 				B9FE57432C6A4D0100F61A78 /* AllResultsView.swift in Sources */,
+				B9CE56A62C6DEE0500AC017C /* Endpoint.swift in Sources */,
 				B906A6882C6A9F94006ED5AB /* Draw.swift in Sources */,
 				B9FE57802C6A5C2100F61A78 /* DateViewModifier.swift in Sources */,
-				B9FE57752C6A574500F61A78 /* StubDataLottoResultsApiService.swift in Sources */,
-				B9FE57712C6A51AF00F61A78 /* LottoResultsApiService.swift in Sources */,
+				B9FE57712C6A51AF00F61A78 /* DrawsApiServiceUseCase.swift in Sources */,
 				B9FE57412C6A4D0100F61A78 /* MkodoTechTestApp.swift in Sources */,
 				B906A6A42C6B5D4B006ED5AB /* BallView.swift in Sources */,
 				B906A6A02C6B518C006ED5AB /* OutcomeViewModel.swift in Sources */,
 				B9FE577B2C6A58E600F61A78 /* ResultView.swift in Sources */,
-				B906A6C22C6B8B05006ED5AB /* StubDataMyTicketsApiService.swift in Sources */,
 				B906A69A2C6B4FE3006ED5AB /* ResultDetailView.swift in Sources */,
 				B906A6B72C6B872A006ED5AB /* MyTicketsViewModel.swift in Sources */,
 				B912B46A2C6B90E900823E6E /* MainViewModel.swift in Sources */,
@@ -515,11 +530,13 @@
 				B9FE57772C6A576600F61A78 /* ApiServiceError.swift in Sources */,
 				B906A6BE2C6B8A6A006ED5AB /* Ticket.swift in Sources */,
 				B906A6A22C6B555B006ED5AB /* PrizeTitleViewModifier.swift in Sources */,
+				B9CE56A02C6D4E4700AC017C /* DrawsApiService.swift in Sources */,
 				B9FE576E2C6A4E6F00F61A78 /* Draws.swift in Sources */,
 				B912B47F2C6BB58D00823E6E /* OutcomeViewModelConvertibleExtension.swift in Sources */,
 				B906A6A62C6B5E53006ED5AB /* BallViewModel.swift in Sources */,
 				B90E28912C6CDEA9008E2053 /* ResultsViewModelFactory.swift in Sources */,
-				B906A6C02C6B8AAF006ED5AB /* MyTicketsApiService.swift in Sources */,
+				B906A6C02C6B8AAF006ED5AB /* MyTicketsApiServiceUseCase.swift in Sources */,
+				B9CE56A22C6D4FD200AC017C /* MyTicketsApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,20 +545,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				B912B47B2C6BB4BB00823E6E /* MatchesTests.swift in Sources */,
+				B9CE56AC2C6DF88900AC017C /* StubDataMyTicketsApiService.swift in Sources */,
 				B9FE57522C6A4D0500F61A78 /* AllResultsViewModelTests.swift in Sources */,
 				B906A6A82C6B69D8006ED5AB /* ResultDetailViewModelTests.swift in Sources */,
 				B906A6AA2C6B6A08006ED5AB /* Draw+Extensions.swift in Sources */,
-				B912B4722C6BA37800823E6E /* StubDataMyTicketsApiServiceTests.swift in Sources */,
-				B906A6932C6AA0B3006ED5AB /* LottoResultsApiServiceSpy.swift in Sources */,
+				B906A6932C6AA0B3006ED5AB /* DrawsApiServiceSpy.swift in Sources */,
 				B906A6AC2C6B6D71006ED5AB /* DrawExtensionsTests.swift in Sources */,
+				B9CE56B02C6DF96700AC017C /* StubDrawsApiService.swift in Sources */,
 				B912B4702C6BA35800823E6E /* MyTicketsViewModelTests.swift in Sources */,
+				B9CE56B82C6E0CEB00AC017C /* DrawsApiServiceTests.swift in Sources */,
 				B912B4812C6BB5D800823E6E /* TicketExtensionTests.swift in Sources */,
+				B9CE56B62C6E0A6100AC017C /* DataCacherTests.swift in Sources */,
 				B90E288F2C6CD7EF008E2053 /* Date+Extensions.swift in Sources */,
 				B912B46C2C6BA31800823E6E /* MainViewModelTests.swift in Sources */,
 				B912B4762C6BB11200823E6E /* Ticket+Extensions.swift in Sources */,
-				B906A6912C6AA08B006ED5AB /* StubDataLottoResultsApiServiceTests.swift in Sources */,
 				B906A68B2C6A9FF0006ED5AB /* ResultViewModelTests.swift in Sources */,
 				B912B4742C6BAC7600823E6E /* MyTicketsApiServiceSpy.swift in Sources */,
+				B9CE56B22C6DFAF500AC017C /* MyTicketsApiServiceTests.swift in Sources */,
 				B912B46E2C6BA33900823E6E /* BallViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

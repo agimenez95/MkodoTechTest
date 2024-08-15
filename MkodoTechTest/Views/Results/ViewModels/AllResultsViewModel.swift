@@ -13,24 +13,24 @@ class AllResultsViewModel {
 
     let navigationTitle = Constant.lottoResults
     var isDataFetchNeeded = true
-    var lottoResults: [Draw]
+    var draws: [Draw]
 
     var isErrorPresented = false
     var error: ApiServiceError?
 
-    private let lottoResultsApiService: LottoResultsApiService
+    private let drawsApiService: DrawsApiServiceUseCase
 
-    init(lottoResults: [Draw] = [],
-         lottoResultsApiService: LottoResultsApiService = StubDataLottoResultsApiService()) {
-        self.lottoResults = lottoResults
-        self.lottoResultsApiService = lottoResultsApiService
+    init(draws: [Draw] = [],
+         drawsApiService: DrawsApiServiceUseCase = DrawsApiService()) {
+        self.draws = draws
+        self.drawsApiService = drawsApiService
 
-        isDataFetchNeeded = lottoResults.isEmpty
+        isDataFetchNeeded = draws.isEmpty
     }
 
     func getData() async {
         do {
-            let response = try await lottoResultsApiService.getLottoResults()
+            let response = try await drawsApiService.getDraws()
             setResultsSorted(draws: response)
         } catch {
             self.error = error as? ApiServiceError
@@ -54,6 +54,6 @@ private extension AllResultsViewModel {
     }
 
     func setResultsSorted(draws: Draws) {
-        lottoResults = draws.draws.sorted { $0.drawDate > $1.drawDate }
+        self.draws = draws.draws.sorted { $0.drawDate > $1.drawDate }
     }
 }

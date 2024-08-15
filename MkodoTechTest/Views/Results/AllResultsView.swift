@@ -13,7 +13,7 @@ struct AllResultsView: View {
 
     var body: some View {
         NavigationStack {
-            List(viewModel.lottoResults) { draw in
+            List(viewModel.draws) { draw in
                 NavigationLink {
                     ResultDetailView(viewModel: viewModel.makeResultDetailViewModel(for: draw))
                 } label: {

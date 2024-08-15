@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Draw: Decodable, Identifiable {
+struct Draw: Codable, Identifiable {
 
     private enum CodingKeys: String, CodingKey {
         case id, drawDate, number1, number2, number3, number4, number5, number6, topPrize

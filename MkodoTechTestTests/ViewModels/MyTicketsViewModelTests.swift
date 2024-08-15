@@ -23,7 +23,7 @@ final class MyTicketsViewModelTests: XCTestCase {
 
     func testMyTicketsViewModel_getTickets_calls_getMyTickets_in_MyTicketsApiService() async {
         let apiServiceSpy = MyTicketsApiServiceSpy()
-        let sut = MyTicketsViewModelFactory.makeMyTicketsViewModel(myTicketsApiService: apiServiceSpy)
+        let sut = MyTicketsViewModelFactory.makeMyTicketsViewModel(apiService: apiServiceSpy)
         XCTAssertFalse(apiServiceSpy.didCallGetMyTickets)
 
         await sut.getTickets()

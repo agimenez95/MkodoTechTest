@@ -1,23 +1,24 @@
 //
-//  StubDataLottoResultsApiService.swift
-//  MkodoTechTest
+//  StubDrawsApiService.swift
+//  MkodoTechTestTests
 //
-//  Created by Adriano Gimenez on 12/08/2024.
+//  Created by Adriano Gimenez on 15/08/2024.
 //
 
 import Foundation
+@testable import MkodoTechTest
 
-final class StubDataLottoResultsApiService: LottoResultsApiService {
+final class StubDrawsApiService: DrawsApiServiceUseCase {
 
-    private let bundle: Bundle
     private let fileName: String
+    private let bundle: Bundle
 
-    init(bundle: Bundle = .main, fileName: String = "StubLottoResultsData") {
-        self.bundle = bundle
+    init(fileName: String = "StubLottoResultsData") {
         self.fileName = fileName
+        self.bundle = Bundle(for: type(of: self))
     }
 
-    func getLottoResults() async throws -> Draws {
+    func getDraws() async throws -> Draws {
         guard let path =  bundle.path(forResource: fileName, ofType: "json") else {
             throw ApiServiceError.missingFileError
         }

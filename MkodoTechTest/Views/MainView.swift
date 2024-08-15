@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainView: View {
 
+//    @Environment var isOffline: Bool
+
     @State var viewModel = MainViewModel()
 
     var body: some View {
@@ -24,7 +26,7 @@ struct MainView: View {
                 }
         }
         .task {
-            await viewModel.getResults()
+            await viewModel.getDraws()
         }
         .alert(isPresented: $viewModel.isErrorPresented) {
             Alert(title: Text(viewModel.error?.description ?? "Error"))

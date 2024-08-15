@@ -8,7 +8,7 @@
 import Foundation
 @testable import MkodoTechTest
 
-final class MyTicketsApiServiceSpy: MyTicketsApiService {
+final class MyTicketsApiServiceSpy: MyTicketsApiServiceUseCase {
 
     var didCallGetMyTickets = false
     var getTicketsInjection: Tickets?

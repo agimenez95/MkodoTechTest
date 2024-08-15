@@ -1,5 +1,5 @@
 //
-//  LottoResultsApiService.swift
+//  DrawsApiServiceUseCase.swift
 //  MkodoTechTest
 //
 //  Created by Adriano Gimenez on 12/08/2024.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol LottoResultsApiService {
-    func getLottoResults() async throws -> Draws
+protocol DrawsApiServiceUseCase {
+    func getDraws() async throws -> Draws
 }
 
-extension LottoResultsApiService {
+extension DrawsApiServiceUseCase {
 
     var dateFormat: String {
         "yyyy-MM-dd"

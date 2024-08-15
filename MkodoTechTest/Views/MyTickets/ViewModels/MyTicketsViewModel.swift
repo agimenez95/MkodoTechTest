@@ -25,12 +25,12 @@ final class MyTicketsViewModel {
     var error: ApiServiceError?
 
     private var tickets: [Ticket]
-    private let myTicketsApiService: MyTicketsApiService
+    private let myTicketsApiService: MyTicketsApiServiceUseCase
     private var results: [String: Draw] = [:]
 
     init(tickets: [Ticket] = [],
          draws: [Draw] = [],
-         myTicketsApiService: MyTicketsApiService = StubDataMyTicketsApiService()) {
+         myTicketsApiService: MyTicketsApiServiceUseCase = MyTicketsApiService()) {
         self.tickets = tickets
         self.myTicketsApiService = myTicketsApiService
         for draw in draws {

@@ -60,7 +60,7 @@ C --> E[MyTicketsView]
     - The `ResultDetailsView` is also a `NavigationLink` which will push itself onto the `NavigationStack`.
     - I thought the default navigation behaviours would be suitable to show the content.
 7. **Additional Tests**: Add more thorough testing and improve test coverage.
-    - Code coverage is **90%**.
+    - Code coverage is **88%**.
     - I focused on covering edge cases with tests.
     - The `Ticket` models are tested to make sure that we are fetching and decoding the data correctly.
     - I also had to test the ordering of the data was consistent (most recent first). 
@@ -69,9 +69,15 @@ C --> E[MyTicketsView]
     - With the default `NavigationStack` we get swiping to go back from the `ResultDetailView` to `AllResultsView`.
     - Future Considerations would be to add an interactive cards for the upcoming tickets that you could swipe back and forth (like a carousel) similarly to the tinder or netflix cards.
 9. **Local Storage**: Cache the lottery draws locally and allow the app to display the cached data when offline.
-    - `NSCache`
-    - consider lifetime of data
-    - make sure to fallback to cache at the right time and to keep it up 
+    - Up until this point I had been reading the data from JSON files that I had been storing locally and reading from them. My caching options would have been:
+        - NSCache
+        - UserDefaults
+        - FileManager
+        - SwiftData
+        - CoreData
+    - I started thinking more holistically about the project. I thought that in a real app, we wouldn't be reading the data from a file stored in the project since the data could change frequently. I altered my approach and put the json files in a github repo and hosted the page so that I could hit it like an endpoint. This means that if we ever wanted to change the endpoint we would only need to change the endpoint url string.
+    - Now that I was using `URLSession` to get the data I decided that a great caching option that became available is `URLCache`.
+        - `URLCache` will persist the data between launches unlike `NSCache` and is built into the `URLRequest`.
 10. **UI/UX Enhancements**: Enhance the visual presentation and user experience of the app using animations or custom UI components.
     - Initially I simply displayed the lottery draw numbers with the dates underneath but it wasn't easy to read because all of the numbers were close together. I decided to display each number of the draw in a circle mimicking the style of the lottery balls. I also used this as an opportunity to demonstrate knowledge of `ViewModifier`'s for the date and prize amount.
     - In the my tickets screen you know which of your balls has matched from the colour that they are. 

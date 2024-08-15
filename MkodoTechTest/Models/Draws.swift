@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Draws: Decodable {
+struct Draws: Codable {
     let draws: [Draw]
 }

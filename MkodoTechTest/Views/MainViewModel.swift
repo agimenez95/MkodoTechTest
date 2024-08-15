@@ -11,14 +11,14 @@ import SwiftUI
 @Observable
 final class MainViewModel {
 
-    var results: [Draw]
+    var draws: [Draw]
 
     var allResultsViewModel: AllResultsViewModel {
-        ResultsViewModelFactory.makeAllResultsViewModel(results: results, apiService: apiService)
+        ResultsViewModelFactory.makeAllResultsViewModel(draws: draws, apiService: apiService)
     }
 
     var myTicketsViewModel: MyTicketsViewModel {
-        MyTicketsViewModelFactory.makeMyTicketsViewModel(draws: results)
+        MyTicketsViewModelFactory.makeMyTicketsViewModel(draws: draws)
     }
 
     let resultsImageName = Constant.resultsImageName
@@ -29,16 +29,17 @@ final class MainViewModel {
     var isErrorPresented = false
     var error: ApiServiceError?
 
-    private let apiService: LottoResultsApiService
+    private let apiService: DrawsApiServiceUseCase
 
-    init(results: [Draw] = [], apiService: LottoResultsApiService = StubDataLottoResultsApiService()) {
-        self.results = results
+    init(draws: [Draw] = [], apiService: DrawsApiServiceUseCase = DrawsApiService()) {
+        self.draws = draws
         self.apiService = apiService
+        
     }
 
-    func getResults() async {
+    func getDraws() async {
         do {
-            results = try await apiService.getLottoResults().draws
+            draws = try await apiService.getDraws().draws
         } catch {
             self.error = error as? ApiServiceError
             isErrorPresented = true

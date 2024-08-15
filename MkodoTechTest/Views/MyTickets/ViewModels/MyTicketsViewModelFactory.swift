@@ -11,7 +11,7 @@ struct MyTicketsViewModelFactory {
 
     static func makeMyTicketsViewModel(tickets: [Ticket] = [],
                                        draws: [Draw] = [],
-                                       myTicketsApiService: MyTicketsApiService = StubDataMyTicketsApiService()) -> MyTicketsViewModel {
-        MyTicketsViewModel(tickets: tickets, draws: draws, myTicketsApiService: myTicketsApiService)
+                                       apiService: MyTicketsApiServiceUseCase = MyTicketsApiService()) -> MyTicketsViewModel {
+        MyTicketsViewModel(tickets: tickets, draws: draws, myTicketsApiService: apiService)
     }
 }

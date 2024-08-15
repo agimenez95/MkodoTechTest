@@ -1,33 +1,33 @@
 //
-//  StubDataLottoResultsApiServiceTests.swift
+//  DrawsApiServiceTests.swift
 //  MkodoTechTestTests
 //
-//  Created by Adriano Gimenez on 12/08/2024.
+//  Created by Adriano Gimenez on 15/08/2024.
 //
 
 @testable import MkodoTechTest
 import XCTest
 
-final class StubDataLottoResultsApiServiceTests: XCTestCase {
+final class DrawsApiServiceTests: XCTestCase {
 
-    func testStubDataLottoResultsApiService() {
-        let sut = StubDataLottoResultsApiService()
+    func testDrawsApiService() {
+        let sut = DrawsApiService()
         XCTAssertNotNil(sut)
     }
 
-    func testStubDataLottoResultsApiService_dateFormat() {
-        let sut = StubDataLottoResultsApiService()
+    func testDrawsApiService_dateFormat() {
+        let sut = DrawsApiService()
         XCTAssertEqual(sut.dateFormat, Constant.expectedDateFormat)
     }
 
-    func testStubDataLottoResultsApiService_dateFormat_setOnSpy() {
-        let sut = LottoResultsApiServiceSpy()
+    func testDrawsApiService_dateFormat_setOnSpy() {
+        let sut = DrawsApiServiceSpy()
         XCTAssertEqual(sut.dateFormat, Constant.expectedDateFormat)
     }
 
-    func testStubDataLottoResultsApiService_testProvidedStubData_decoded_successfully() async throws {
-        let sut = StubDataLottoResultsApiService()
-        let response = try await sut.getLottoResults()
+    func testDrawsApiService_testProvidedStubData_decoded_successfully() async throws {
+        let sut = DrawsApiService()
+        let response = try await sut.getDraws()
         XCTAssertEqual(response.draws.count, 3)
 
         XCTAssertEqual(response.draws[0].id, "draw-1")
@@ -63,38 +63,12 @@ final class StubDataLottoResultsApiServiceTests: XCTestCase {
         XCTAssertEqual(response.draws[2].bonusBall, "51")
         XCTAssertEqual(response.draws[2].topPrize, 6_000_000_000)
     }
-
-    func testStubDataLottoResultsApiService_testMissingFile_throws_missingFileError() async {
-        let sut = StubDataLottoResultsApiService(bundle: Bundle(for: type(of: self)),
-                                                 fileName: Constant.missingJSONFileName)
-
-        do {
-            _ = try await sut.getLottoResults()
-            XCTFail("The line above should error since the file is missing.")
-        } catch {
-            XCTAssertEqual(error as? ApiServiceError, ApiServiceError.missingFileError)
-        }
-    }
-
-    func testStubDataLottoResultsApiService_FaultyJSON_throws_decodingError() async {
-        let sut = StubDataLottoResultsApiService(bundle: Bundle(for: type(of: self)),
-                                                 fileName: Constant.faultyJSONFileName)
-
-        do {
-            _ = try await sut.getLottoResults()
-            XCTFail("The line above should error since the file is missing.")
-        } catch {
-            XCTAssertEqual(error as? ApiServiceError, ApiServiceError.decodingError)
-        }
-    }
 }
 
-private extension StubDataLottoResultsApiServiceTests {
+private extension DrawsApiServiceTests {
 
     enum Constant {
         static let expectedDateFormat = "yyyy-MM-dd"
-        static let faultyJSONFileName = "FaultyJSON"
-        static let missingJSONFileName = "missing"
     }
 
     func getCustomDate(from string: String) -> Date? {

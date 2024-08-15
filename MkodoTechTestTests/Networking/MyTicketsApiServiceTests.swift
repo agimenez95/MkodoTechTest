@@ -1,22 +1,22 @@
 //
-//  StubDataMyTicketsApiServiceTests.swift
+//  MyTicketsApiServiceTests.swift
 //  MkodoTechTestTests
 //
-//  Created by Adriano Gimenez on 13/08/2024.
+//  Created by Adriano Gimenez on 15/08/2024.
 //
 
 @testable import MkodoTechTest
 import XCTest
 
-final class StubDataMyTicketsApiServiceTests: XCTestCase {
+final class MyTicketsApiServiceTests: XCTestCase {
 
-    func testStubDataMyTicketsApiService() {
-        let sut = StubDataMyTicketsApiService()
+    func testMyTicketsApiService() {
+        let sut = MyTicketsApiService()
         XCTAssertNotNil(sut)
     }
 
-    func testStubDataMyTicketsApiService_testProvidedStubData_decoded_successfully() async throws {
-        let sut = StubDataMyTicketsApiService()
+    func testMyTicketsApiService_decoded_successfully() async throws {
+        let sut = MyTicketsApiService()
         let response = try await sut.getMyTickets()
         XCTAssertEqual(response.tickets.count, 5)
 
@@ -71,25 +71,4 @@ final class StubDataMyTicketsApiServiceTests: XCTestCase {
         XCTAssertEqual(response.tickets[4].bonusBall, "10")
     }
 
-    func testStubDataMyTicketsApiService_testMissingFile_throws_missingFileError() async {
-        let sut = StubDataMyTicketsApiService(bundle: Bundle(for: type(of: self)), fileName: "missing")
-
-        do {
-            _ = try await sut.getMyTickets()
-            XCTFail("The line above should error since the file is missing.")
-        } catch {
-            XCTAssertEqual(error as? ApiServiceError, ApiServiceError.missingFileError)
-        }
-    }
-
-    func testStubDataMyTicketsApiService_FaultyJSON_throws_decodingError() async {
-        let sut = StubDataMyTicketsApiService(bundle: Bundle(for: type(of: self)), fileName: "FaultyJSON")
-
-        do {
-            _ = try await sut.getMyTickets()
-            XCTFail("The line above should error since the JSON is faulty.")
-        } catch {
-            XCTAssertEqual(error as? ApiServiceError, ApiServiceError.decodingError)
-        }
-    }
 }

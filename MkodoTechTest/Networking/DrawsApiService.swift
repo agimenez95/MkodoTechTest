@@ -1,5 +1,5 @@
 //
-//  MyTicketsApiService.swift
+//  DrawsApiService.swift
 //  MkodoTechTest
 //
 //  Created by Adriano Gimenez on 14/08/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MyTicketsApiService: MyTicketsApiServiceUseCase {
+final class DrawsApiService: DrawsApiServiceUseCase {
 
     private let urlSession: URLSession
     private let cache: DataCacher
@@ -17,20 +17,24 @@ final class MyTicketsApiService: MyTicketsApiServiceUseCase {
         self.cache = cache
     }
 
-    func getMyTickets() async throws -> Tickets {
-        guard let url = Endpoint.tickets.url else {
+    func getDraws() async throws -> Draws {
+        guard let url = Endpoint.draws.url else {
             throw ApiServiceError.faultyEndpoint
         }
 
-        let request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
 
-        let ticketsData: Data
-
+        let request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy)
+        let drawsData: Data
+        
         do {
             let (data, response) = try await urlSession.data(for: request)
             cache.cacheData(request: request, data: data, response: response)
-            ticketsData = data
+            drawsData = data
         } catch {
             // Get the data from the cache if the user is offline
             guard let error = error as? URLError,
@@ -38,11 +42,11 @@ final class MyTicketsApiService: MyTicketsApiServiceUseCase {
                   let data = cache.getCachedData(from: url) else {
                 throw ApiServiceError.notConnectedToInternet
             }
-            ticketsData = data
+            drawsData = data
         }
 
         do {
-            return try decoder.decode(Tickets.self, from: ticketsData)
+            return try decoder.decode(Draws.self, from: drawsData)
         } catch {
             throw ApiServiceError.decodingError
         }

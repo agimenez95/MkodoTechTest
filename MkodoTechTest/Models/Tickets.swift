@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Tickets: Decodable {
+struct Tickets: Codable {
     let tickets: [Ticket]
 }

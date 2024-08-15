@@ -1,20 +1,21 @@
 //
 //  StubDataMyTicketsApiService.swift
-//  MkodoTechTest
+//  MkodoTechTestTests
 //
-//  Created by Adriano Gimenez on 13/08/2024.
+//  Created by Adriano Gimenez on 15/08/2024.
 //
 
 import Foundation
+@testable import MkodoTechTest
 
-final class StubDataMyTicketsApiService: MyTicketsApiService {
+final class StubDataMyTicketsApiService: MyTicketsApiServiceUseCase {
 
-    private let bundle: Bundle
     private let fileName: String
+    private let bundle: Bundle
 
-    init(bundle: Bundle = .main, fileName: String = "StubMyTicketsData") {
-        self.bundle = bundle
+    init(fileName: String = "StubMyTicketsData") {
         self.fileName = fileName
+        self.bundle = Bundle(for: type(of: self))
     }
 
     func getMyTickets() async throws -> Tickets {
