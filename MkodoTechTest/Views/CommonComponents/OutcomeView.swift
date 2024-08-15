@@ -46,6 +46,7 @@ struct OutcomeView: View {
         }
         .padding([.leading, .trailing], Constant.padding)
         .task {
+            guard !viewModel.isAnimating else { return }
             bouncingBall = viewModel.shouldAnimate ? .ball1 : .none
             bounceAnimation()
         }
@@ -64,6 +65,8 @@ private extension OutcomeView {
 
     @MainActor
     func bounceAnimation() {
+        viewModel.isAnimating = bouncingBall != .none
+
         withAnimation(.easeOut(duration: Constant.animationDuration)) {
             bounceHeight = Constant.bounceHeight
         }
@@ -72,6 +75,8 @@ private extension OutcomeView {
             bounceHeight = .zero
         } completion: {
             bouncingBall = bouncingBall.next
+            viewModel.isAnimating = bouncingBall != .none
+
             if bouncingBall != .none {
                 bounceAnimation()
             }

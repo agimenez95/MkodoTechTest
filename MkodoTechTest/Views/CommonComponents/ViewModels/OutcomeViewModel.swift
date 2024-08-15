@@ -28,6 +28,7 @@ final class OutcomeViewModel {
     var matchesBonusBall: Matches
 
     var shouldAnimate: Bool
+    var isAnimating: Bool = false
 
     init(number1: String,
          number2: String,
