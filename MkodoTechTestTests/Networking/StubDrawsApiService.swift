@@ -33,7 +33,6 @@ final class StubDrawsApiService: DrawsApiServiceUseCase {
             let data = try Data(contentsOf: URL(fileURLWithPath: path))
             return try decoder.decode(Draws.self, from: data)
         } catch {
-            print(error)
             throw ApiServiceError.decodingError
         }
     }
