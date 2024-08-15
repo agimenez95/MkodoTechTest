@@ -6,7 +6,7 @@ Hi! My name is Adriano, and this is my submission for the technical test for the
 ## Tech Stack
 - Swift
 - SwiftUI
-- Built with the latest Xcode
+- Built on Xcode 15.4
 - Observation Framework
 - XCTest (The new swift testing framework would have been nice to use but I wanted to complete the work in the latest non-beta release of Xcode)
 
@@ -16,17 +16,17 @@ Hi! My name is Adriano, and this is my submission for the technical test for the
 ### App Architecture
 
 From the outset I have a few things in mind:
-    - Keep it simple
-    - Are you going to need it?
-    - 
+- Keep it simple
+- Are you going to need it?
+
 I thought about what architecture would be suitable here and I ended up going with the "keep it simple" approach. Since there are only three screens that get shown to the user. I thought it wouldn't be right to over engineer the architecture. If more complex behaviour were needed or if we were going to extrapolate the tech test into a more comprehensive app, I would at that point consider changing the architecture to be a coordinator pattern or even the TCA pattern.
 
+#### Final Architecture
 ![image info](./images/architecture.jpeg)
 
 ### Essential tasks
 1. **Parse JSON Data**: Load and parse the provided JSON data within the app
-    - Models are decodable.
-    - Since we don't have an endpoint to hit, I thought it would be a good idea to create a protocol that would describe the desired behaviour of fetching the data. Then I created a class that would fetch the data from a local JSON file which could easily be switched with another class to hit an endpoint if that we
+    - Since we don't have an endpoint to hit, I thought it would be a good idea to create a protocol that would describe the desired behaviour of fetching the data. In the unit tests I am able to create a class that conforms to the `DrawsApiServiceUseCase` protocol and I can read the data from JSON files. I then uploaded the stub data to github ( https://github.com/agimenez95/LottoDrawsJSON ). This way I was able to get the data as if I were hitting an endpoint. 
 2. **Display Lottery Draws**: Create a simple view that lists all lottery draws with their respective draw dates.
     - I made the `Draw` model `Identifiable` and displayed the lottery draws in a `List` in `AllResultsView`. 
 3. **Unit and Integration Testing**: Write tests to cover critical functionalities of the application.
@@ -48,7 +48,7 @@ I thought about what architecture would be suitable here and I ended up going wi
         - We would have old tickets that are a part of a draw that has already taken place. 
         - We would also have new tickets that haven't been drawn yet.
         - We would probably hit a tickets endpoint to get the data. Similarly to the results, I have created a model for a ticket that has a ticketId and a drawId. We can compare with the results data to associate which tickets belong to which draw.
-        - I created ticket data that I have stubbed in a JSON file. Also, I created a facade that we can swap out with a class that could hit an endpoint but would still conform to the `MyTicketsApiService` protocol.
+        - I created ticket data that I have stubbed in a JSON file (and also uploaded it to the same github repo I mentioned earlier). Also, I created a facade that defines the behaviour of the apiService called `MyTicketsApiServiceUseCase`. I tested the service similarly to the `DrawsApiService`.
 6. **Navigation**: Add basic navigation from the main list view to the detail views of each draw.
     - I embedded the `AllResultsView` and `MyTicketsView` in a `TabView`.
     - The `ResultDetailsView` is also a `NavigationLink` which will push itself onto the `NavigationStack`.
@@ -58,11 +58,13 @@ I thought about what architecture would be suitable here and I ended up going wi
     - I focused on covering edge cases with tests.
     - The `Ticket` models are tested to make sure that we are fetching and decoding the data correctly.
     - I also had to test the ordering of the data was consistent (most recent first). 
+    - One improvement that I wanted to implement but I kept coming up against a crash that I couldn't resolve is creating a dummy `URLSession` so that we can stub the response in `func data(for request: URLRequest) async throws -> (Data, URLResponse)`. I tried creating a fake `URLProtocol` class to return data specified in a test but alas the test suite would crash. I searched extensively online but couldn't find a solution. At this point, I would typically bring in a fresh pair of eyes to collaborate on the problem, rather than skip adding those valuable tests.
     - If I had more time I would have considered adding UI tests or even snapshot tests. This would ensure that future UI changes will be made with purpose and make sure new features don't _accidentally_ change existing ones.
 8. **Interactive Navigation**: Implement swipe gestures to navigate between different draw details.
     - With the default `NavigationStack` we get swiping to go back from the `ResultDetailView` to `AllResultsView`.
     - Future Considerations would be to add an interactive cards for the upcoming tickets that you could swipe back and forth (like a carousel) similarly to the tinder or netflix cards.
 9. **Local Storage**: Cache the lottery draws locally and allow the app to display the cached data when offline.
+    - This was one of the last tasks that I picked up since I was trying to tackle them in order.
     - Up until this point I had been reading the data from JSON files that I had been storing locally and reading from them. My caching options would have been:
         - NSCache
         - UserDefaults
@@ -79,4 +81,3 @@ I thought about what architecture would be suitable here and I ended up going wi
         - Red: Not matching the result
         - Gold: Bonus ball matches the result bonus ball
     - I added a bounce animation to the lottery balls in the result details screen.
-
