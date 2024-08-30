@@ -9,8 +9,6 @@ import SwiftUI
 
 struct MainView: View {
 
-//    @Environment var isOffline: Bool
-
     @State var viewModel = MainViewModel()
 
     var body: some View {
